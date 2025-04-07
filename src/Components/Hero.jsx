@@ -1,3 +1,5 @@
+import heroImage from "../assets/hero-img.webp";
+
 export default function Hero() {
   return (
     <section className="section-hero">
@@ -14,7 +16,7 @@ export default function Hero() {
 
       <div className="hero-img-wrapper">
         <img
-          src="/src/assets/hero-img.webp"
+          src={heroImage}
           alt="A couples enjoying the sunsets at hill station"
           className="hero-img"
         />
