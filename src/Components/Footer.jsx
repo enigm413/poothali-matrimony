@@ -1,4 +1,4 @@
-import logoImage from "srcassetspoothali-matrimony-logo.png";
+import logoImage from "../assets/poothali-matrimony-logo.png";
 
 export default function Footer() {
   return (
