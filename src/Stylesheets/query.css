@@ -1,0 +1,484 @@
+/*------------------------------*/
+/*----------MEDIUM_DESKTOP-------*/
+/*------------------------------*/
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  /*------------------------------*/
+  /*---------SECTION_NAVBAR-------*/
+  /*------------------------------*/
+
+  header {
+    padding: 4.4rem 2.8rem;
+  }
+
+  .logo-img {
+    height: 5.6rem;
+  }
+
+  .navlink-list {
+    gap: 2rem;
+  }
+
+  /*------------------------------*/
+  /*----------SECTION_HERO--------*/
+  /*------------------------------*/
+
+  .section-hero {
+    gap: 5.6rem;
+  }
+
+  .hero-text-wrapper {
+    padding-left: 4.8rem;
+  }
+
+  .hero-img {
+    object-position: 70% 100%;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_HOW_IT_WORKS----*/
+  /*------------------------------*/
+
+  .section-how-it-works {
+    padding: 11.2rem 5.6rem 3.6rem 5.6rem;
+  }
+
+  .step-list {
+    gap: 4.4rem;
+    padding: 4.4rem 3.6rem;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_GALLERY---------*/
+  /*------------------------------*/
+
+  .section-gallery {
+    padding: 3.6rem 11.2rem;
+  }
+
+  .gallery-wrapper {
+    gap: 1.6rem;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_CONTACT---------*/
+  /*------------------------------*/
+
+  .section-contact {
+    padding: 6.4rem 5.6rem 11.2rem 5.6rem;
+  }
+
+  .contact-txt-wrapper {
+    padding: 5.6rem 3.2rem;
+  }
+
+  .contact-title {
+    padding-bottom: 2.8rem;
+  }
+
+  .contact-list {
+    gap: 1.6rem;
+  }
+
+  .contact-description {
+    padding-bottom: 2rem;
+  }
+
+  /*------------------------------*/
+  /*-------SECTION_FOOTER---------*/
+  /*------------------------------*/
+
+  .section-footer {
+    padding: 8rem 2.4rem 2rem 2.4rem;
+  }
+
+  .section-footer .container {
+    padding-bottom: 3.6rem;
+  }
+
+  .footer-container {
+    gap: 4.4rem;
+  }
+}
+
+/*------------------------------*/
+/*----------TABLETS-------------*/
+/*------------------------------*/
+
+@media (max-width: 1030px) {
+  html {
+    font-size: 50%;
+  }
+
+  /*------------------------------*/
+  /*---------SECTION_NAVBAR-------*/
+  /*------------------------------*/
+
+  header {
+    position: static;
+    background-color: #fff;
+    padding: 4rem 2.4rem 4rem 2.4rem;
+  }
+
+  .navlink-list,
+  .btn--admin-login {
+    display: none;
+  }
+
+  .btn--menu-btn {
+    display: block;
+  }
+
+  /*------------------------------*/
+  /*----------SECTION_HERO--------*/
+  /*------------------------------*/
+
+  .section-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+    top: 0;
+  }
+
+  .hero-text-wrapper {
+    position: absolute;
+    transform: translateY(10%);
+    width: 70%;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    object-position: 50% 100%;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_HOW_IT_WORKS----*/
+  /*------------------------------*/
+
+  .section-how-it-works {
+    padding: 9.6rem 4.8rem 3.2rem 4.8rem;
+  }
+
+  .step-list-wrapper {
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+
+  .step-img-wrapper {
+    height: 70vw;
+    background-position: 100% 90%;
+  }
+
+  .step-list {
+    gap: 8rem;
+  }
+
+  .step {
+    width: 70%;
+    padding: 3.2rem;
+    box-shadow: 0 0 0.7rem;
+    border-radius: 2rem;
+  }
+
+  .step--2 {
+    align-self: flex-end;
+  }
+
+  .arrow-icon {
+    display: block;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_GALLERY---------*/
+  /*------------------------------*/
+
+  .section-gallery {
+    padding: 3.2rem 12.8rem;
+  }
+
+  .gallery-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_CONTACT---------*/
+  /*------------------------------*/
+
+  .section-contact {
+    padding: 5.6rem 4.8rem 19.2rem 4.8rem;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    border-radius: 2rem;
+    padding: 0 4.8rem;
+  }
+
+  .contact-txt-wrapper {
+    border-bottom-right-radius: 2rem;
+  }
+
+  .contact-img-wrapper {
+    grid-row: 1/2;
+    height: 35vw;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 0rem;
+    background-position: top;
+  }
+
+  .contact-title {
+    padding: 0rem 8rem 3.2rem 8rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .contact-list {
+    gap: 1.6rem;
+  }
+
+  .contact-description {
+    text-align: center;
+  }
+
+  /*------------------------------*/
+  /*-------SECTION_FOOTER---------*/
+  /*------------------------------*/
+
+  .section-footer {
+    padding: 6.4rem 2rem 1.6rem 2rem;
+  }
+
+  .section-footer .container {
+    padding-bottom: 3.2rem;
+  }
+
+  .footer-container {
+    gap: 4rem;
+  }
+}
+
+/*------------------------------*/
+/*------SMALLER-TABLETS---------*/
+/*------------------------------*/
+
+@media (max-width: 720px) {
+  html {
+    font-size: 44%;
+  }
+
+  h1 {
+    padding-bottom: 2rem;
+  }
+
+  /*------------------------------*/
+  /*----------SECTION_HERO--------*/
+  /*------------------------------*/
+
+  .hero-text-wrapper {
+    width: 100%;
+    transform: translateY(5%);
+    padding: 0rem 4.8rem;
+  }
+
+  .section-hero p {
+    padding-bottom: 2.4rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 70vw;
+    object-position: 50% 100%;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_HOW_IT_WORKS----*/
+  /*------------------------------*/
+
+  .section-how-it-works {
+    padding: 8rem 2.4rem 2.8rem 2.4rem;
+  }
+
+  .step-list-wrapper {
+    gap: 6.4rem;
+  }
+
+  .step {
+    width: 80%;
+    padding: 2.8rem;
+  }
+
+  .right-arrow {
+    transform: translate(10%, -70%) rotate(90deg);
+  }
+
+  .left-arrow {
+    transform: translate(-10%, -70%) rotate(270deg);
+  }
+
+  /*------------------------------*/
+  /*------SECTION_GALLERY---------*/
+  /*------------------------------*/
+
+  .section-gallery {
+    padding: 2.4rem;
+  }
+
+  .gallery-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_CONTACT---------*/
+  /*------------------------------*/
+
+  .section-contact {
+    padding: 5.6rem 4rem 17.6rem 4rem;
+  }
+
+  .contact-wrapper {
+    padding: 0 2.4rem;
+  }
+
+  .contact-title {
+    padding: 0rem 4.4rem 3.2rem 4.4rem;
+    font-size: 3rem;
+  }
+
+  .contact-list {
+    gap: 0.8rem;
+  }
+
+  /*------------------------------*/
+  /*-------SECTION_FOOTER---------*/
+  /*------------------------------*/
+
+  .section-footer {
+    padding: 4.8rem 1.6rem 0.8rem 1.6rem;
+  }
+
+  .section-footer .container {
+    padding-bottom: 2.8rem;
+  }
+
+  .footer-container {
+    gap: 3.6rem;
+  }
+}
+
+/*------------------------------*/
+/*-------------MOBILES----------*/
+/*------------------------------*/
+
+@media (max-width: 520px) {
+  html {
+    font-size: 38%;
+  }
+
+  h1 {
+    padding-bottom: 1.6rem;
+  }
+
+  /*------------------------------*/
+  /*----------SECTION_HERO--------*/
+  /*------------------------------*/
+
+  .hero-text-wrapper {
+    transform: translateY(0%);
+    padding: 0rem 2.4rem;
+  }
+
+  .section-hero p {
+    padding-bottom: 2rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100vw;
+    object-position: 35% 100%;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_HOW_IT_WORKS----*/
+  /*------------------------------*/
+
+  .section-how-it-works {
+    padding: 6.4rem 2rem 2.4rem 2rem;
+  }
+
+  .step-list-wrapper {
+    gap: 4.8rem;
+  }
+
+  .step {
+    padding: 2rem;
+  }
+
+  .arrow-icon {
+    font-size: 14.4rem;
+  }
+
+  .right-arrow {
+    transform: translate(-10%, -70%) rotate(90deg);
+  }
+
+  .left-arrow {
+    transform: translate(10%, -70%) rotate(270deg);
+  }
+
+  /*------------------------------*/
+  /*------SECTION_GALLERY---------*/
+  /*------------------------------*/
+
+  .section-gallery {
+    padding: 2rem;
+  }
+
+  .gallery-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  /*------------------------------*/
+  /*------SECTION_CONTACT---------*/
+  /*------------------------------*/
+
+  .section-contact {
+    padding: 4.8rem 2.4rem 16rem 2.4rem;
+  }
+
+  .contact-wrapper {
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  .contact-title {
+    padding: 0rem 4.4rem 3.2rem 4.4rem;
+    font-size: 3rem;
+  }
+
+  .contact-list {
+    gap: 0.8rem;
+  }
+
+  /*------------------------------*/
+  /*-------SECTION_FOOTER---------*/
+  /*------------------------------*/
+
+  .section-footer {
+    padding: 4.4rem 1.2rem 0.4rem 1.2rem;
+  }
+
+  .section-footer .container {
+    padding-bottom: 2.8rem;
+  }
+
+  .footer-container {
+    gap: 3.6rem;
+  }
+}
