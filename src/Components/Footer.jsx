@@ -1,13 +1,11 @@
+import logoImage from "srcassetspoothali-matrimony-logo.png";
+
 export default function Footer() {
   return (
     <footer className="section-footer">
       <div className="container footer-container">
         <div className="footer-logo-wrapper">
-          <img
-            src="src\assets\poothali-matrimony-logo.png"
-            alt="logo-img"
-            className="logo-img"
-          />
+          <img src={logoImage} alt="logo-img" className="logo-img" />
         </div>
 
         <div>

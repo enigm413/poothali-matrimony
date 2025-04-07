@@ -1,11 +1,9 @@
+import logoImage from "srcassetspoothali-matrimony-logo.png";
+
 export default function Navbar() {
   return (
     <header>
-      <img
-        src="src\assets\poothali-matrimony-logo.png"
-        alt="Poothali Matrimony Logo"
-        className="logo-img"
-      />
+      <img src={logoImage} alt="Poothali Matrimony Logo" className="logo-img" />
       <nav>
         <ul className="navlink-list">
           <li>
