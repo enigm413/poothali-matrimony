@@ -1,3 +1,10 @@
+import gallery01Image from "../assets/Gallery/gallery-01.webp";
+import gallery02Image from "../assets/Gallery/gallery-02.webp";
+import gallery03Image from "../assets/Gallery/gallery-03.webp";
+import gallery04Image from "../assets/Gallery/gallery-04.webp";
+import gallery05Image from "../assets/Gallery/gallery-05.webp";
+import gallery06Image from "../assets/Gallery/gallery-06.webp";
+
 export default function Gallery() {
   return (
     <section className="section-gallery">
@@ -7,51 +14,27 @@ export default function Gallery() {
 
       <ul className="gallery-wrapper container">
         <li className="gallery-img-wrapper gallery-01-wrapper">
-          <img
-            src="src\assets\Gallery\gallery-01.webp"
-            alt="Gallery 01"
-            className="gallery-img"
-          />
+          <img src={gallery01Image} alt="Gallery 01" className="gallery-img" />
         </li>
 
         <li className="gallery-img-wrapper gallery-02-wrapper">
-          <img
-            src="src\assets\Gallery\gallery-02.webp"
-            alt="Gallery 02"
-            className="gallery-img"
-          />
+          <img src={gallery02Image} alt="Gallery 02" className="gallery-img" />
         </li>
 
         <li className="gallery-img-wrapper gallery-03-wrapper">
-          <img
-            src="src\assets\Gallery\gallery-03.webp"
-            alt="Gallery 03"
-            className="gallery-img"
-          />
+          <img src={gallery03Image} alt="Gallery 03" className="gallery-img" />
         </li>
 
         <li className="gallery-img-wrapper">
-          <img
-            src="src\assets\Gallery\gallery-04.webp"
-            alt="Gallery 04"
-            className="gallery-img"
-          />
+          <img src={gallery04Image} alt="Gallery 04" className="gallery-img" />
         </li>
 
         <li className="gallery-img-wrapper">
-          <img
-            src="src\assets\Gallery\gallery-05.webp"
-            alt="Gallery 05"
-            className="gallery-img"
-          />
+          <img src={gallery05Image} alt="Gallery 05" className="gallery-img" />
         </li>
 
         <li className="gallery-img-wrapper">
-          <img
-            src="src\assets\Gallery\gallery-06.webp"
-            alt="Gallery 06"
-            className="gallery-img"
-          />
+          <img src={gallery06Image} alt="Gallery 06" className="gallery-img" />
         </li>
       </ul>
     </section>
