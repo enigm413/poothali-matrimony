@@ -1,3 +1,4 @@
+// Function to define Gallery Component
 export default function Gallery() {
   return (
     <section className="section-gallery">

@@ -1,3 +1,4 @@
+// Function to define Contact Component
 export default function Contact() {
   return (
     <section className="section-contact">

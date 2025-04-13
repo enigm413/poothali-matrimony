@@ -1,3 +1,4 @@
+// Function to define Footer Component
 export default function Footer() {
   return (
     <footer className="section-footer">

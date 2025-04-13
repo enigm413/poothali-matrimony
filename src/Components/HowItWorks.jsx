@@ -1,3 +1,4 @@
+// Function to define How It Work Component
 export default function HowItWorks() {
   return (
     <section className="section-how-it-works">
