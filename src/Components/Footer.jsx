@@ -1,39 +1,33 @@
+import logoImg from "../assets/Images/logo.png";
+import { pageLinks } from "../assets/data";
+
 // Function to define Footer Component
 export default function Footer() {
   return (
     <footer className="section-footer">
-      <div className="container footer-container">
-        <div className="footer-logo-wrapper">
-          <img
-            src="poothali-matrimony-logo.png"
-            alt="logo-img"
-            className="logo-img"
-          />
-        </div>
+      <nav className="wrapper footer-container">
+        <img src={logoImg} alt="logo-img" className="logo-img" />
 
-        <div>
-          <ul className="footer-list">
-            <li className="footer-item">
-              <a href="#">How It Works</a>
-            </li>
-            <li className="footer-item">
-              <a href="#">Gallery</a>
-            </li>
-            <li className="footer-item">
-              <a href="#">Contact Us</a>
-            </li>
-            <li className="footer-item">
-              <a href="#">Profiles</a>
-            </li>
-          </ul>
-        </div>
+        <ul className="navlink-list">
+          {pageLinks.map((link) => {
+            const { id, href, text } = link;
+            return (
+              <li key={id}>
+                <a href={href} className="navlink">
+                  {text}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
 
         <div>
           <p className="copy">
-            Copyright © 2025 by Poothali Matrimony, Inc. All rights reserved.
+            Copyright © {new Date().getFullYear()} by Poothali Matrimony, Inc.
+            All rights reserved.
           </p>
         </div>
-      </div>
+      </nav>
     </footer>
   );
 }
