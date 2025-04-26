@@ -1,4 +1,5 @@
 import { adminContactOptions } from "../assets/data";
+import "../Stylesheets/contact.css";
 
 // Function to define Contact Component
 export default function Contact() {

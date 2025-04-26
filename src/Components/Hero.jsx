@@ -1,4 +1,5 @@
 import heroImg from "../assets/Images/hero-img.webp";
+import "../Stylesheets/hero.css";
 
 // Function To Define Hero Component
 export default function Hero() {
@@ -22,6 +23,7 @@ export default function Hero() {
           src={heroImg}
           alt="A couples enjoying the sunsets at hill station"
           className="hero-img"
+          loading="lazy"
         />
       </div>
     </section>

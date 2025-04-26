@@ -18,6 +18,14 @@ import stepImg02 from "../assets/Images/Step-Images/step-02.webp";
 import stepImg03 from "../assets/Images/Step-Images/step-03.webp";
 
 //----------------------------------
+//------Import Profile Images-------
+//----------------------------------
+
+import profileImg01 from "../assets/Images/Profiles/profile-01.webp";
+import profileImg02 from "../assets/Images/Profiles/profile-02.webp";
+import profileImg03 from "../assets/Images/Profiles/profile-03.webp";
+
+//----------------------------------
 //-------Export Page Links----------
 //----------------------------------
 
@@ -142,5 +150,154 @@ export const stepList = [
     text: "If you finds an interesting profile, you must like the profile and contact the Admin to request the contact and address details. After verification, the Admin will share the necessary information via WhatsApp.",
     src: stepImg03,
     alt: "A person chat on phone",
+  },
+];
+
+//----------------------------------
+//-------Export_Profile_List--------
+//----------------------------------
+
+export const profileList = [
+  {
+    id: 1,
+    img: profileImg01,
+    name: "Arun Krishnan",
+    age: "30 Years",
+    location: "Ernakulam, Kerala",
+    job: "Software Engineer at Infosys, Kochi",
+    religion: "Hindu (Menon)",
+  },
+
+  {
+    id: 2,
+    img: profileImg02,
+    name: "Anjali Nair",
+    age: "27 Years",
+    location: "Kochi, Kerala",
+    job: "School Counselor in Kochi",
+    religion: "Hindu (Nair)",
+  },
+
+  {
+    id: 3,
+    img: profileImg03,
+    name: "Maria Thomas",
+    age: "26 Years",
+    location: "Ernakulam, Kerala",
+    job: "HR Executive at an MNC",
+    religion: "Christian",
+  },
+  {
+    id: 1,
+    img: profileImg01,
+    name: "Arun Krishnan",
+    age: "30 Years",
+    location: "Ernakulam, Kerala",
+    job: "Software Engineer at Infosys, Kochi",
+    religion: "Hindu (Menon)",
+  },
+
+  {
+    id: 2,
+    img: profileImg02,
+    name: "Anjali Nair",
+    age: "27 Years",
+    location: "Kochi, Kerala",
+    job: "School Counselor in Kochi",
+    religion: "Hindu (Nair)",
+  },
+
+  {
+    id: 3,
+    img: profileImg03,
+    name: "Maria Thomas",
+    age: "26 Years",
+    location: "Ernakulam, Kerala",
+    job: "HR Executive at an MNC",
+    religion: "Christian",
+  },
+  {
+    id: 1,
+    img: profileImg01,
+    name: "Arun Krishnan",
+    age: "30 Years",
+    location: "Ernakulam, Kerala",
+    job: "Software Engineer at Infosys, Kochi",
+    religion: "Hindu (Menon)",
+  },
+
+  {
+    id: 2,
+    img: profileImg02,
+    name: "Anjali Nair",
+    age: "27 Years",
+    location: "Kochi, Kerala",
+    job: "School Counselor in Kochi",
+    religion: "Hindu (Nair)",
+  },
+
+  {
+    id: 3,
+    img: profileImg03,
+    name: "Maria Thomas",
+    age: "26 Years",
+    location: "Ernakulam, Kerala",
+    job: "HR Executive at an MNC",
+    religion: "Christian",
+  },
+  {
+    id: 1,
+    img: profileImg01,
+    name: "Arun Krishnan",
+    age: "30 Years",
+    location: "Ernakulam, Kerala",
+    job: "Software Engineer at Infosys, Kochi",
+    religion: "Hindu (Menon)",
+  },
+
+  {
+    id: 2,
+    img: profileImg02,
+    name: "Anjali Nair",
+    age: "27 Years",
+    location: "Kochi, Kerala",
+    job: "School Counselor in Kochi",
+    religion: "Hindu (Nair)",
+  },
+
+  {
+    id: 3,
+    img: profileImg03,
+    name: "Maria Thomas",
+    age: "26 Years",
+    location: "Ernakulam, Kerala",
+    job: "HR Executive at an MNC",
+    religion: "Christian",
+  },
+];
+
+//------------------------------------
+//-------Export_Profile_Fields--------
+//------------------------------------
+
+export const profileDetails = [
+  {
+    id: "age",
+    icon: "calendar-number-outline",
+  },
+
+  {
+    id: "location",
+    icon: "location-outline",
+  },
+
+  {
+    id: "job",
+    icon: "briefcase-outline",
+  },
+
+  {
+    id: "religion",
+    icon: "people-outline",
   },
 ];

@@ -1,0 +1,28 @@
+/*------------------------------*/
+/*------SECTION_GALLERY---------*/
+/*------------------------------*/
+
+.section-gallery {
+  padding: 4rem 12.8rem 4rem 12.8rem;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  overflow: hidden;
+  list-style: none;
+}
+
+.gallery-img-wrapper {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  align-self: start;
+  border-radius: 1.2rem;
+}
+
+.gallery-img {
+  width: 100%;
+}

@@ -1,5 +1,6 @@
 import logoImg from "../assets/Images/logo.png";
 import { pageLinks } from "../assets/data";
+import "../Stylesheets/navbar.css";
 
 // Function To Define Navbar Component
 export default function Navbar() {

@@ -1,5 +1,6 @@
 import logoImg from "../assets/Images/logo.png";
 import { pageLinks } from "../assets/data";
+import "../Stylesheets/footer.css";
 
 // Function to define Footer Component
 export default function Footer() {

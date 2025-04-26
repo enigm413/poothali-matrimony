@@ -1,0 +1,129 @@
+/*------------------------------*/
+/*------SECTION_PROFILES---------*/
+/*------------------------------*/
+
+.section-profiles {
+  padding: 4.8rem 6.4rem 12.8rem 6.4rem;
+}
+
+.profiles-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profiles-filter-wrapper {
+  background-color: #d97904;
+  color: #fff;
+  padding: 1.2rem 4.8rem;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+.profiles-title {
+  font-size: 2.5rem;
+}
+
+.profiles-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 4.8rem;
+}
+
+.profile-card {
+  border-radius: 1.2rem;
+  box-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.profile-img-wrapper {
+  width: 100%;
+}
+
+.profile-card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.profile-card-text-wrapper {
+  padding: 3.2rem;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 3.2rem;
+}
+
+.profile-card-detail-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+.profile-card-detail-item {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.profile-card-detail-icon {
+  font-size: 2.5rem;
+  color: #b35b00;
+}
+
+.profile-card-detail-item:nth-child(2) .profile-card-detail-text {
+  margin-left: -0.4rem;
+}
+
+.profile-card-detail-item:nth-child(3) .profile-card-detail-text {
+  line-height: 1.5;
+}
+
+.info-btn {
+  padding: 0.8rem 4.8rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #d97904;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+.info-btn:hover {
+  background-color: #b35b00;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.pagination button {
+  font-size: 1.6rem;
+  background-color: #d97904;
+  color: #fbf2e6;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1.2rem 5.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  transition: all 0.5ms;
+}
+
+.pagination button:hover,
+.pagination button:visited {
+  background-color: #fff;
+  color: #160c00;
+  outline: 0.2rem solid #d97904;
+}

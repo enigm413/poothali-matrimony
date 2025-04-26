@@ -1,4 +1,5 @@
 import { galleryImages } from "../assets/data";
+import "../Stylesheets/gallery.css";
 
 // Function to define Gallery Component
 export default function Gallery() {
@@ -13,7 +14,7 @@ export default function Gallery() {
           const { id, src, alt } = img;
           return (
             <li className="gallery-img-wrapper gallery-01-wrapper" key={id}>
-              <img src={src} alt={alt} className="gallery-img" />
+              <img src={src} alt={alt} className="gallery-img" loading="lazy" />
             </li>
           );
         })}
