@@ -19,6 +19,7 @@
   border-radius: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.8px;
+  cursor: pointer;
 }
 
 .profiles-title {
@@ -111,7 +112,7 @@
 .pagination button {
   font-size: 1.6rem;
   background-color: #d97904;
-  color: #fbf2e6;
+  color: #fff;
   border: none;
   border-radius: 0.8rem;
   padding: 1.2rem 5.6rem;
