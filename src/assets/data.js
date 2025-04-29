@@ -136,7 +136,7 @@ export const stepList = [
   },
 
   {
-    is: 2,
+    id: 2,
     number: "02",
     title: "User Account Activation & Access",
     text: "Once the Admin sets up the account, you will receive a WhatsApp notification. You can now log in using the username and password to access the platform and browse available profiles.",
@@ -145,6 +145,7 @@ export const stepList = [
   },
 
   {
+    id: 3,
     number: "03",
     title: "Profile Interest & Contact Request",
     text: "If you finds an interesting profile, you must like the profile and contact the Admin to request the contact and address details. After verification, the Admin will share the necessary information via WhatsApp.",
@@ -187,8 +188,9 @@ export const profileList = [
     job: "HR Executive at an MNC",
     religion: "Christian",
   },
+
   {
-    id: 1,
+    id: 4,
     img: profileImg01,
     name: "Arun Krishnan",
     age: "30 Years",
@@ -198,7 +200,7 @@ export const profileList = [
   },
 
   {
-    id: 2,
+    id: 5,
     img: profileImg02,
     name: "Anjali Nair",
     age: "27 Years",
@@ -208,7 +210,7 @@ export const profileList = [
   },
 
   {
-    id: 3,
+    id: 6,
     img: profileImg03,
     name: "Maria Thomas",
     age: "26 Years",
@@ -216,8 +218,9 @@ export const profileList = [
     job: "HR Executive at an MNC",
     religion: "Christian",
   },
+
   {
-    id: 1,
+    id: 7,
     img: profileImg01,
     name: "Arun Krishnan",
     age: "30 Years",
@@ -227,7 +230,7 @@ export const profileList = [
   },
 
   {
-    id: 2,
+    id: 8,
     img: profileImg02,
     name: "Anjali Nair",
     age: "27 Years",
@@ -237,7 +240,7 @@ export const profileList = [
   },
 
   {
-    id: 3,
+    id: 9,
     img: profileImg03,
     name: "Maria Thomas",
     age: "26 Years",
@@ -245,8 +248,9 @@ export const profileList = [
     job: "HR Executive at an MNC",
     religion: "Christian",
   },
+
   {
-    id: 1,
+    id: 10,
     img: profileImg01,
     name: "Arun Krishnan",
     age: "30 Years",
@@ -256,7 +260,7 @@ export const profileList = [
   },
 
   {
-    id: 2,
+    id: 11,
     img: profileImg02,
     name: "Anjali Nair",
     age: "27 Years",
@@ -266,7 +270,7 @@ export const profileList = [
   },
 
   {
-    id: 3,
+    id: 12,
     img: profileImg03,
     name: "Maria Thomas",
     age: "26 Years",

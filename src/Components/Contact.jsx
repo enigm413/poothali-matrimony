@@ -1,4 +1,4 @@
-import { adminContactOptions } from "../assets/data";
+import ContactList from "./ContactList";
 import "../Stylesheets/contact.css";
 
 // Function to define Contact Component
@@ -18,19 +18,7 @@ export default function Contact() {
             guidance."
           </p>
 
-          <ul className="contact-list">
-            {adminContactOptions.map((contactOption) => {
-              const { id, icon, text } = contactOption;
-              return (
-                <li className="contact-item" key={id}>
-                  <span className="contact-icon">
-                    <ion-icon name={icon}></ion-icon>
-                  </span>
-                  <span className="contact-text">{text}</span>
-                </li>
-              );
-            })}
-          </ul>
+          <ContactList />
         </article>
 
         <div className="contact-img-wrapper"></div>
