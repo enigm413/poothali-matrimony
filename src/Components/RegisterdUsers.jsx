@@ -1,7 +1,12 @@
-import Pagination from "./Pagination";
 import { useState } from "react";
+
+// Import Necessary Component
+import Pagination from "./Pagination";
+
+// Import Nrcessary data
 import { profileList } from "./Profiles";
 
+//Define User Registeration Header
 const userRegHeader = [
   { id: 1, title: "user id" },
   { id: 2, title: "name" },
@@ -12,8 +17,10 @@ const userRegHeader = [
 ];
 
 export default function RegisteredUsers() {
+  //Set the States
   const [userData, setuserData] = useState(profileList);
 
+  //Function To Delete An Entry
   const deleteEntry = (id) => {
     const newUserData = userData.filter((user) => user.id !== id);
     setuserData(newUserData);
@@ -51,11 +58,9 @@ export default function RegisteredUsers() {
               const { id, name, age, religion, location } = user;
               return (
                 <tr className="row" key={id}>
-                  <td>{id}</td>
-                  <td>{name}</td>
-                  <td>{age}</td>
-                  <td>{religion}</td>
-                  <td>{location}</td>
+                  {[id, name, age, religion, location].map((val, index) => {
+                    return <td key={index}>{val}</td>;
+                  })}
                   <td>
                     <button className="btn" onClick={() => deleteEntry(id)}>
                       Delete
