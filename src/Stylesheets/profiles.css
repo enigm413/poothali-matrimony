@@ -3,23 +3,18 @@
 /*------------------------------*/
 
 .section-profiles {
-  padding: 4.8rem 6.4rem 12.8rem 6.4rem;
+  padding: 9.6rem 0rem 9.6rem 0rem;
 }
 
-.profiles-title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.section-profiles .title-wrapper {
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
+  border-radius: 1.2rem;
+  padding: 3.2rem 4.8rem;
+  margin-bottom: 6.4rem;
 }
 
-.profiles-filter-wrapper {
-  background-color: #d97904;
-  color: #fff;
+.btn--filter {
   padding: 1.2rem 4.8rem;
-  border-radius: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  cursor: pointer;
 }
 
 .profiles-title {
@@ -29,8 +24,9 @@
 .profiles-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 3.2rem;
+  column-gap: 4rem;
   row-gap: 4.8rem;
+  padding-bottom: 6.4rem;
 }
 
 .profile-card {
@@ -62,19 +58,19 @@
 .profile-card-detail-list {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1.6rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.8rem;
 }
 
 .profile-card-detail-item {
   display: flex;
-  gap: 1.4rem;
+  gap: 3.2rem;
   align-items: center;
 }
 
 .profile-card-detail-icon {
-  font-size: 2.5rem;
+  font-size: 3.1rem;
   color: #b35b00;
 }
 
@@ -86,19 +82,9 @@
   line-height: 1.5;
 }
 
-.info-btn {
-  padding: 0.8rem 4.8rem;
-  border: none;
-  border-radius: 2rem;
-  background-color: #d97904;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  cursor: pointer;
-}
-
-.info-btn:hover {
-  background-color: #b35b00;
+.btn--info {
+  border-radius: 1.2rem;
+  width: 100%;
 }
 
 .pagination {
@@ -109,21 +95,12 @@
   list-style: none;
 }
 
-.pagination button {
+.btn--pagination {
   font-size: 1.6rem;
-  background-color: #d97904;
-  color: #fff;
-  border: none;
-  border-radius: 0.8rem;
   padding: 1.2rem 5.6rem;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  transition: all 0.5ms;
 }
 
-.pagination button:hover,
-.pagination button:visited {
+.btn--pagination:hover {
   background-color: #fff;
   color: #160c00;
   outline: 0.2rem solid #d97904;

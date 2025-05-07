@@ -1,11 +1,10 @@
 export default function Pagination() {
   return (
-    <ol className="wrapper pagination">
+    <ol className="pagination wrapper">
       {Array.from({ length: 6 }).map((_, index) => {
-        const text = index === 0 ? "Previous" : index === 5 ? "Next" : index;
         return (
-          <li key={index}>
-            <button>{text}</button>
+          <li key={index + 1}>
+            <button className="btn btn--pagination">{index + 1}</button>
           </li>
         );
       })}

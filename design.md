@@ -8,7 +8,7 @@
 
 ### Font Size System(in PX)
 
-13/16/20/25/31/39/49/61
+13/14/16/18/20/23/25/29/32/36/40/45/51/57/64/
 
 ## Spacing System(in PX)
 
@@ -17,7 +17,7 @@
 ## Color
 
 - Primary Color :
-- Secondary Color :
+- Secondary Color : #fff
 - Accent Color : #d97904 / #b35b00
 - Light Grey : #fbf2e6
 - Dark Grey : #160c00

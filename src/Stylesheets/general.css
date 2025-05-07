@@ -1,0 +1,120 @@
+/******************************/
+/********GENERAL-STYLING*******/
+/******************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #160c00;
+}
+
+.wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-img-wrapper {
+  align-self: center;
+}
+
+.logo-img {
+  height: 5.6rem;
+  border-radius: 1.2rem;
+  object-fit: cover;
+}
+
+.navlink-list {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navlink:link,
+.navlink:visited {
+  color: #570600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navlink:hover,
+.navlink:active {
+  color: #d97904;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 9.6rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-style: italic;
+  color: #b35b00;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.btn {
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  background-color: #d97904;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #b35b00;
+}
+
+.dashboard-title {
+  font-size: 3.1rem;
+  text-transform: capitalize;
+  font-style: normal;
+  color: #160c00;
+  letter-spacing: 1.2px;
+}
+
+.justify-content--center {
+  justify-content: center !important;
+}
+
+.justify-content--space-between {
+  justify-content: space-between !important;
+}

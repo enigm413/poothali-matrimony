@@ -1,0 +1,146 @@
+/*--------------------------------*/
+/*------SECTION_SUMMARY_CARD------*/
+/*--------------------------------*/
+
+.section-summary-cards {
+  padding: 9.6rem 0rem 9.6rem 0rem;
+}
+
+.section-summary-cards .title-wrapper {
+  padding-bottom: 4rem;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8rem;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(#b35b00, #fff);
+  padding: 8rem 2.4rem;
+  align-items: center;
+  border-radius: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.8);
+}
+
+.summary-card-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+}
+
+.summary-card-text {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+
+/*--------------------------------*/
+/*----SECTION_REGISTERED_USERS----*/
+/*--------------------------------*/
+
+.section-registered-users {
+  padding: 9.6rem 0rem 6.4rem 0rem;
+}
+
+.section-registered-users .title-wrapper {
+  padding-bottom: 4rem;
+}
+
+.reg-users {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  padding-bottom: 8rem;
+}
+
+.reg-users-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.5);
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+}
+
+.reg-user-header-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.searchbar {
+  width: 60%;
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: 1.6rem;
+  font-size: 1.6rem;
+  box-shadow: 0 0 0.2rem rgba(217, 121, 4, 0.8);
+  transition: all 0.5ms;
+}
+
+.searchbar:focus {
+  outline: none;
+  box-shadow: 0 0rem 0.8rem rgba(217, 121, 4, 0.8);
+}
+
+.reg-user-table {
+  box-shadow: 0 0rem 0.8rem rgba(0, 0, 0, 0.4);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #d97904;
+  color: #fff;
+}
+
+tbody,
+thead {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3.2rem 1.6rem;
+}
+
+th,
+td {
+  align-self: center;
+  justify-self: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2rem;
+}
+
+th {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+
+.btn--delete {
+  border: none;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  background-color: #d97904;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+td {
+  letter-spacing: 1.1px;
+}

@@ -1,5 +1,5 @@
+//Import necessary Assets
 import heroImg from "../assets/Images/hero-img.webp";
-import "../Stylesheets/hero.css";
 
 // Function To Define Hero Component
 export default function Hero() {
@@ -15,7 +15,9 @@ export default function Hero() {
           soul."
         </p>
 
-        <a href="#section-contact">Find Your Perfect Match</a>
+        <a href="#section-contact" className="btn">
+          Find Your Perfect Match
+        </a>
       </div>
 
       <div className="hero-img-wrapper">
