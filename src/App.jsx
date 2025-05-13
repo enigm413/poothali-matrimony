@@ -1,3 +1,6 @@
+// Importing Necessary hooks
+import { useState } from "react";
+
 // Importing Necessary Components
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
@@ -16,17 +19,27 @@ import "./Stylesheets/profiles.css";
 import "./Stylesheets/dashboard.css";
 
 export default function App() {
+  const [activePage, setActivePage] = useState("home");
   return (
     <>
-      <Navbar />
-      {/* <Hero />
-      <HowItWorks />
-      <Gallery />
-      <Contact />
-      <Profiles /> */}
-      <SummaryCards />
-      <RegisteredUsers />
-      <Footer />
+      <Navbar activePage={activePage} setActivePage={setActivePage} />
+      {activePage === "home" ? (
+        <>
+          <Hero />
+          <HowItWorks />
+          <Gallery />
+          <Contact />
+        </>
+      ) : activePage === "profiles" ? (
+        <Profiles />
+      ) : (
+        <>
+          <SummaryCards />
+          <RegisteredUsers />
+        </>
+      )}
+
+      <Footer setActivePage={setActivePage} />
     </>
   );
 }

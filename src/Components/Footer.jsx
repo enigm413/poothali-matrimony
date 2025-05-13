@@ -2,10 +2,10 @@
 import NavContents from "./NavContents";
 
 // Function to define Footer Component
-export default function Footer() {
+export default function Footer({ setActivePage }) {
   return (
     <footer>
-      <NavContents />
+      <NavContents setActivePage={setActivePage} />
 
       <p className="copy">
         Copyright © {new Date().getFullYear()} by Poothali Matrimony, Inc. All

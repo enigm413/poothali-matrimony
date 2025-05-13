@@ -20,12 +20,6 @@ export default function RegisteredUsers() {
   //Set the States
   const [userData, setuserData] = useState(profileList);
 
-  //Function To Delete An Entry
-  const deleteEntry = (id) => {
-    const newUserData = userData.filter((user) => user.id !== id);
-    setuserData(newUserData);
-  };
-
   return (
     <section className="section-registered-users" id="section-registered-us">
       <div className="wrapper title-wrapper">
@@ -62,9 +56,9 @@ export default function RegisteredUsers() {
                     return <td key={index}>{val}</td>;
                   })}
                   <td>
-                    <button className="btn" onClick={() => deleteEntry(id)}>
-                      Delete
-                    </button>
+                    <a href="#" className="btn">
+                      More Info
+                    </a>
                   </td>
                 </tr>
               );
