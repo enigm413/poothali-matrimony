@@ -3,11 +3,7 @@
 /*--------------------------------*/
 
 .section-summary-cards {
-  padding: 9.6rem 0rem 9.6rem 0rem;
-}
-
-.section-summary-cards .title-wrapper {
-  padding-bottom: 4rem;
+  padding: 9.6rem 0rem 6.4rem 0rem;
 }
 
 .summary-cards {
@@ -19,14 +15,13 @@
 .summary-card {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
-  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(#b35b00, #fff);
-  padding: 8rem 2.4rem;
+  gap: 2rem;
+  box-shadow: 0 0rem 0.4rem rgba(0, 0, 0, 0.4);
+  background-color: #d97904;
+  padding: 4rem 0.8rem;
   align-items: center;
-  border-radius: 1.2rem;
+  border-radius: 2rem;
   color: #fff;
-  text-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.8);
 }
 
 .summary-card-title {
@@ -47,7 +42,7 @@
 /*--------------------------------*/
 
 .section-registered-users {
-  padding: 9.6rem 0rem 6.4rem 0rem;
+  padding: 6.4rem 0rem 6.4rem 0rem;
 }
 
 .section-registered-users .title-wrapper {
@@ -119,7 +114,7 @@ td {
 
 .row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1.2fr 1fr 0.5fr repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   border-radius: 1.2rem;

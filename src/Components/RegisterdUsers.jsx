@@ -1,14 +1,9 @@
-import { useState } from "react";
-
 // Import Necessary Component
 import Pagination from "./Pagination";
 
-// Import Nrcessary data
-import { profileList } from "./Profiles";
-
-//Define User Registeration Header
+//Define User Registration Header
 const userRegHeader = [
-  { id: 1, title: "user id" },
+  { id: 1, title: "User ID" },
   { id: 2, title: "name" },
   { id: 3, title: "age" },
   { id: 4, title: "Religion (caste)" },
@@ -16,10 +11,7 @@ const userRegHeader = [
   { id: 6, title: "action" },
 ];
 
-export default function RegisteredUsers() {
-  //Set the States
-  const [userData, setuserData] = useState(profileList);
-
+export default function RegisteredUsers({ users }) {
   return (
     <section className="section-registered-users" id="section-registered-us">
       <div className="wrapper title-wrapper">
@@ -33,7 +25,9 @@ export default function RegisteredUsers() {
             placeholder="Enter the User Id"
             className="searchbar"
           />
-          <button className="btn">Add New User</button>
+          <a href="#" className="btn">
+            Add New User
+          </a>
           <button className="btn">Notification &#11206; </button>
         </div>
 
@@ -48,11 +42,11 @@ export default function RegisteredUsers() {
           </thead>
 
           <tbody>
-            {userData.map((user) => {
-              const { id, name, age, religion, location } = user;
+            {users.map((user) => {
+              const { $id, name, age, religion, location } = user;
               return (
-                <tr className="row" key={id}>
-                  {[id, name, age, religion, location].map((val, index) => {
+                <tr className="row" key={$id}>
+                  {[$id, name, age, religion, location].map((val, index) => {
                     return <td key={index}>{val}</td>;
                   })}
                   <td>

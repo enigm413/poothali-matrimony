@@ -16,8 +16,12 @@
 
 ## Color
 
-- Primary Color :
+- Primary Color : #570600
 - Secondary Color : #fff
 - Accent Color : #d97904 / #b35b00
 - Light Grey : #fbf2e6
 - Dark Grey : #160c00
+
+## Gradient
+
+- linear-gradient(#160c00, #d97904)

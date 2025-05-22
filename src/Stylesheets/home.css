@@ -1,33 +1,4 @@
 /*------------------------------*/
-/*---------SECTION_NAVBAR-------*/
-/*------------------------------*/
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.home--navbar {
-  position: absolute;
-  background-color: transperent;
-  padding: 5.6rem 4.8rem;
-  top: 0;
-  width: 100%;
-}
-
-.page--navbar {
-  background-color: #fbf2e6;
-  padding: 4rem 4.8rem;
-}
-
-header .navlink:link,
-header .navlink:visited {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-/*------------------------------*/
 /*----------SECTION_HERO--------*/
 /*------------------------------*/
 
@@ -72,7 +43,7 @@ header .navlink:visited {
 }
 
 /*------------------------------*/
-/*------SECTION_HOW_IT_WORKS----*/
+/*-----SECTION_HOW_IT_WORKS-----*/
 /*------------------------------*/
 
 .section-how-it-works {
@@ -165,7 +136,7 @@ header .navlink:visited {
 }
 
 /*------------------------------*/
-/*------SECTION_CONTACT---------*/
+/*------SECTION_GALLERY---------*/
 /*------------------------------*/
 
 .section-contact {
@@ -187,14 +158,6 @@ header .navlink:visited {
 }
 
 .contact-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  padding-bottom: 3.2rem;
-  text-align: center;
-  letter-spacing: 1.5px;
-}
-
-.contact-sub-title {
   font-size: 2.3rem;
   padding-bottom: 2.8rem;
   line-height: 1.4;
@@ -234,49 +197,11 @@ header .navlink:visited {
   font-size: 3.2rem;
 }
 
-.contact-link:link,
-.contact-link:visited {
-  line-height: 1.6;
+.contact-text {
+  line-height: 1.8;
   color: #570600;
-  font-weight: 500;
   transition: all 0.3s;
   letter-spacing: 1.05px;
-}
-
-.contact-link:hover,
-.contact-link:active {
-  color: #b35b00;
-}
-
-/*------------------------------*/
-/*-------SECTION_FOOTER---------*/
-/*------------------------------*/
-
-footer {
-  padding: 6.4rem 2.4rem 2.4rem 2.4rem;
-  background-color: #fbf2e6;
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
-}
-
-footer .navlink:link,
-footer .navlink:visited {
-  font-size: 1.4rem;
-  font-weight: 500;
-  padding-bottom: 0.2rem;
-}
-
-footer .navlink:hover,
-footer .navlink:active {
-  color: rgba(87, 6, 0, 0.5);
-}
-
-.copy {
-  font-size: 1.4rem;
-  letter-spacing: 2.5px;
-  font-weight: 600;
-  color: #b35b00;
-  text-align: center;
-  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 0.4rem;
 }

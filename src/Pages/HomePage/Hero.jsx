@@ -1,5 +1,4 @@
-//Import necessary Assets
-import heroImg from "../assets/Images/hero-img.webp";
+import heroImg from "../../assets/Images/hero-img.webp";
 
 // Function To Define Hero Component
 export default function Hero() {
