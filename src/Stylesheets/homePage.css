@@ -1,0 +1,207 @@
+/*------------------------------*/
+/*----------SECTION_HERO--------*/
+/*------------------------------*/
+
+.section-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  background-color: #fbf2e6;
+}
+
+.hero-text-wrapper {
+  transform: translateY(15%);
+  padding-left: 6.4rem;
+}
+
+.hero-title {
+  font-size: 5.1rem;
+  padding-bottom: 3.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #570600;
+}
+
+.section-hero p {
+  font-size: 2rem;
+  line-height: 1.6;
+  padding-bottom: 3.2rem;
+}
+
+.section-hero .btn:link,
+.section-hero .btn:visited {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 100% 100%;
+}
+
+/*------------------------------*/
+/*-----SECTION_HOW_IT_WORKS-----*/
+/*------------------------------*/
+
+.section-how-it-works {
+  padding: 12.8rem 0 8rem 0;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  column-gap: 6.4rem;
+  background-color: #fff;
+}
+
+.step:nth-child(even) .step-text-wrapper {
+  grid-column: 2/3;
+}
+
+.step:nth-child(even) .step-text-wrapper {
+  grid-row: 1/2;
+}
+
+.step-number {
+  font-size: 5.7rem;
+  font-weight: 900;
+  color: rgba(87, 6, 0, 0.3);
+  padding-bottom: 2rem;
+}
+
+.step-title {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #160c00;
+  padding-bottom: 1.6rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.step-img-wrapper {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 2.4rem 35%;
+}
+
+.step-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/*------------------------------*/
+/*------SECTION_GALLERY---------*/
+/*------------------------------*/
+
+.section-gallery {
+  padding: 9.6rem 0;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  overflow: hidden;
+  list-style: none;
+}
+
+.gallery-img-wrapper {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  align-self: start;
+  border-radius: 1.2rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+/*------------------------------*/
+/*------SECTION_GALLERY---------*/
+/*------------------------------*/
+
+.section-contact {
+  padding: 8rem 6.4rem 12.8rem 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  border-radius: 2rem;
+}
+
+.contact-txt-wrapper {
+  padding: 6.4rem 4.8rem;
+  background-color: #fbf2e6;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.contact-title {
+  font-size: 2.3rem;
+  padding-bottom: 2.8rem;
+  line-height: 1.4;
+}
+
+.contact-description {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  padding-bottom: 2.4rem;
+}
+
+.contact-img-wrapper {
+  width: 100%;
+  background-image: url("../assets/Images/contact.webp");
+  background-size: cover;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-position: 50% 50%;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.contact-icon {
+  color: #d97904;
+  font-size: 3.2rem;
+}
+
+.contact-text {
+  line-height: 1.8;
+  color: #570600;
+  transition: all 0.3s;
+  letter-spacing: 1.05px;
+  text-decoration: none;
+  padding-bottom: 0.4rem;
+}

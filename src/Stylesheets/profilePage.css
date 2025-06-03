@@ -1,0 +1,152 @@
+/*-------------------------------*/
+/*----SECTION_PROFILE----*/
+/*-------------------------------*/
+
+.section-profile {
+  padding: 9.6rem 0rem 9.6rem 0rem;
+}
+
+.profile-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  align-items: start;
+  gap: 4rem;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.4);
+  padding: 4rem;
+  border-radius: 1.6rem;
+  position: sticky;
+  top: 0;
+}
+
+.profile-name {
+  font-size: 3.6rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #b35b00;
+  margin-bottom: -1.6rem;
+  font-weight: 700;
+}
+
+.profile-gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.main-img-wrapper {
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.main-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.2rem;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  align-items: start;
+}
+
+.profile-img-wrapper {
+  width: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  list-style: none;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.birth-chart-wrapper {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.7);
+  border-radius: 1.2rem;
+  padding: 4.8rem 3.2rem;
+}
+
+.birth-chart-title {
+  font-size: 2.5rem;
+  padding-bottom: 2.4rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.profile-btns {
+  display: flex;
+  gap: 3.2rem;
+  justify-content: center;
+  border-radius: 1.2rem;
+}
+
+.btn--profile {
+  padding: 1.2rem 2.8rem;
+}
+
+.profile-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.profile-category-wrapper {
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.4);
+  border-radius: 1.2rem;
+  padding: 4.4rem 4rem;
+  grid-row: span 2;
+}
+
+.profile-category-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-bottom: 3.2rem;
+  text-transform: capitalize;
+}
+
+.profile-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  line-height: 1.5;
+}
+
+.profile-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: none;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.4);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.4rem;
+}
+
+.profile-detail-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #b35b00;
+}
+
+.profile-detail-text {
+  font-size: 1.8rem;
+}

@@ -42,6 +42,36 @@ body {
   letter-spacing: 2px;
 }
 
+.btn {
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  background-color: #d97904;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #b35b00;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-style: normal;
+  color: #160c00;
+  letter-spacing: 1.2px;
+}
+
+/******************************/
+/*************NAVBAR***********/
+/******************************/
+
 header {
   display: flex;
   align-items: center;
@@ -61,8 +91,7 @@ header {
   padding: 4rem 4.8rem;
 }
 
-header .navlink:link,
-header .navlink:visited {
+header .navlink {
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -90,51 +119,18 @@ nav {
   text-decoration: none;
 }
 
-.navlink:link,
-.navlink:visited {
+.navlink {
   color: #570600;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.navlink:hover,
-.navlink:active {
-  color: #d97904;
-}
-
-.btn {
-  padding: 1.2rem 3.2rem;
   border: none;
-  border-radius: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-transform: uppercase;
-  background-color: #d97904;
-  color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.btn:link,
-.btn:visited {
-  font-size: 1.4rem;
-  font-weight: 500;
-  display: inline-block;
-}
-
-.btn:hover,
-.btn:active {
-  background-color: #b35b00;
-}
-
-.dashboard-title {
-  font-size: 2.5rem;
-  text-transform: capitalize;
-  font-style: normal;
-  color: #160c00;
-  letter-spacing: 1.2px;
+.navlink:hover {
+  color: #d97904;
 }
 
 footer {
@@ -145,16 +141,46 @@ footer {
   gap: 3.2rem;
 }
 
-footer .navlink:link,
-footer .navlink:visited {
+footer .navlink {
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-bottom: 0.2rem;
 }
 
 footer .navlink:hover,
 footer .navlink:active {
   color: rgba(87, 6, 0, 0.5);
+}
+
+.error-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+  padding: 3.2rem 0 8rem 0;
+}
+
+.error-img-wrapper {
+  width: 100%;
+}
+
+.error-img {
+  width: 100%;
+}
+
+.error-title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  padding-bottom: 4rem;
+  color: #b35b00;
+  text-align: center;
+}
+
+.error-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  padding-bottom: 3.2rem;
 }
 
 .copy {
@@ -172,4 +198,12 @@ footer .navlink:active {
 
 .justify-content--space-between {
   justify-content: space-between !important;
+}
+
+.grid-row--span-2 {
+  grid-row: span 2;
+}
+
+.align-self--strech {
+  align-self: stretch;
 }

@@ -1,0 +1,101 @@
+/*------------------------------*/
+/*------SECTION_PROFILES---------*/
+/*------------------------------*/
+
+.section-profiles {
+  padding: 9.6rem 0rem 9.6rem 0rem;
+}
+
+.section-profiles .title-wrapper {
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
+  border-radius: 1.2rem;
+  padding: 3.2rem 4.8rem;
+  margin-bottom: 6.4rem;
+}
+
+.btn--filter {
+  padding: 1.2rem 4.8rem;
+}
+
+.profiles-title {
+  font-size: 2.5rem;
+}
+
+.profiles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 4.8rem;
+  padding-bottom: 6.4rem;
+}
+
+.profile-card {
+  box-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-card-img-wrapper {
+  width: 100%;
+}
+
+.profile-card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.profile-card-text-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 1.2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.profile-card-title-wrapper,
+.profile-card-content-wrapper {
+  transform: translateX(5%);
+  text-shadow: 0rem 0rem 2rem rgb(0, 0, 0);
+}
+
+.profile-card-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 700;
+  padding-bottom: 1.6rem;
+}
+
+.profile-card-title-wrapper .name {
+  font-size: 2rem;
+}
+
+.profile-card-title-wrapper .age {
+  font-size: 1.8rem;
+}
+
+.profile-card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-style: italic;
+  padding-bottom: 2rem;
+  list-style: none;
+}
+
+.btn--info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 0;
+  background-color: #d97904;
+  color: #fff;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
