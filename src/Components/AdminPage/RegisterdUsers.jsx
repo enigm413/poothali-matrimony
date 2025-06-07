@@ -14,7 +14,9 @@ export default function RegisteredUsers({ users, setNewPage }) {
             placeholder="Enter the User Id"
             className="searchbar"
           />
-          <button className="btn">Add New User</button>
+          <button className="btn" onClick={() => setNewPage("form")}>
+            Add New User
+          </button>
           <button className="btn">Notification &#11206; </button>
         </div>
 

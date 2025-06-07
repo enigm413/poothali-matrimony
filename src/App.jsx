@@ -7,6 +7,7 @@ import HomePage from "./Components/HomePage/";
 import AdminPage from "./Components/AdminPage/";
 import ProfilesPage from "./Components/ProfilesPage/";
 import ProfilePage from "./Components/ProfilePage.jsx";
+import FormPage from "./Components/FormPage/index.jsx";
 
 export default function App() {
   const [newPage, setNewPage] = useState("home");
@@ -56,6 +57,8 @@ export default function App() {
         ))}
 
       {newPage === "profile" && <ProfilePage {...user} />}
+
+      {newPage === "form" && <FormPage />}
       <Footer setNewPage={setNewPage} />
     </>
   );
