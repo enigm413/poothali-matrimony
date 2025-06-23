@@ -11,7 +11,7 @@
 }
 
 .hero-text-wrapper {
-  transform: translateY(15%);
+  transform: translateY(20%);
   padding-left: 6.4rem;
 }
 
@@ -19,14 +19,14 @@
   font-size: 5.1rem;
   padding-bottom: 3.2rem;
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.1;
   color: #570600;
 }
 
 .section-hero p {
   font-size: 2rem;
-  line-height: 1.6;
-  padding-bottom: 3.2rem;
+  line-height: 1.7;
+  padding-bottom: 3.6rem;
 }
 
 .section-hero .btn:link,

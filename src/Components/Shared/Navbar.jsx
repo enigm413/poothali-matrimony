@@ -2,14 +2,14 @@
 import NavContent from "./NavContents.jsx";
 
 // Function To Define Navbar Component
-export default function Navbar({ newPage, setNewPage }) {
+export default function Navbar({ newPage, handleNewPage }) {
   return (
     <header className={newPage === "home" ? "navbar--home" : "navbar--page"}>
-      <NavContent setNewPage={setNewPage} />
+      <NavContent handleNewPage={handleNewPage} />
 
       <button
         className="btn btn--login"
-        onClick={() => setNewPage("dashboard")}
+        onClick={() => handleNewPage("dashboard")}
       >
         Admin Login
       </button>

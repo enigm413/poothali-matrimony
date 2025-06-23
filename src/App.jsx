@@ -1,4 +1,5 @@
 import "./Stylesheets/general.css";
+import "./Stylesheets/Responsive/query.css";
 
 import { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";
@@ -10,7 +11,9 @@ import ProfilePage from "./Components/ProfilePage.jsx";
 import FormPage from "./Components/FormPage/index.jsx";
 
 export default function App() {
-  const [newPage, setNewPage] = useState("home");
+  const [newPage, setNewPage] = useState(
+    sessionStorage.getItem("currentPage") || "home"
+  );
   const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
@@ -32,14 +35,19 @@ export default function App() {
     fetchData();
   }, []);
 
+  const handleNewPage = (page) => {
+    setNewPage(page);
+    sessionStorage.setItem("currentPage", page);
+  };
+
   const handleMoreInfo = (userData) => {
     setUser(userData);
-    setNewPage("profile");
+    handleNewPage("profile");
   };
 
   return (
     <>
-      <Navbar setNewPage={setNewPage} newPage={newPage} />
+      <Navbar handleNewPage={handleNewPage} newPage={newPage} />
       {newPage === "home" && <HomePage />}
 
       {newPage === "profiles" &&
@@ -53,13 +61,13 @@ export default function App() {
         (isError ? (
           <Error />
         ) : (
-          <AdminPage users={users} setNewPage={setNewPage} />
+          <AdminPage users={users} handleNewPage={handleNewPage} />
         ))}
 
       {newPage === "profile" && <ProfilePage {...user} />}
 
       {newPage === "form" && <FormPage />}
-      <Footer setNewPage={setNewPage} />
+      <Footer handleNewPage={handleNewPage} />
     </>
   );
 }

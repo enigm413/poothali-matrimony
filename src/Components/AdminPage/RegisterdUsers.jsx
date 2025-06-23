@@ -1,6 +1,6 @@
 import { tableHeader } from "../../Data/dashboardData";
 
-export default function RegisteredUsers({ users, setNewPage }) {
+export default function RegisteredUsers({ users, handleNewPage }) {
   return (
     <section className="section-registered-users" id="section-registered-us">
       <div className="wrapper title-wrapper">
@@ -14,7 +14,7 @@ export default function RegisteredUsers({ users, setNewPage }) {
             placeholder="Enter the User Id"
             className="searchbar"
           />
-          <button className="btn" onClick={() => setNewPage("form")}>
+          <button className="btn" onClick={() => handleNewPage("form")}>
             Add New User
           </button>
           <button className="btn">Notification &#11206; </button>

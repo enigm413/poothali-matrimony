@@ -2,7 +2,7 @@
 import logoImg from "../../assets/Images/logo.webp";
 import { pageLinks } from "../../Data/pageLinkData";
 
-export default function NavContents({ setNewPage }) {
+export default function NavContents({ handleNewPage }) {
   return (
     <>
       <div className="logo-img-wrapper">
@@ -17,7 +17,7 @@ export default function NavContents({ setNewPage }) {
               <li
                 className="navlink"
                 key={text}
-                onClick={() => setNewPage(page)}
+                onClick={() => handleNewPage(page)}
               >
                 {text}
               </li>
