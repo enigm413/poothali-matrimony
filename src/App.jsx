@@ -1,5 +1,5 @@
 import "./Stylesheets/general.css";
-import "./Stylesheets/Responsive/query.css";
+import "./Stylesheets/Responsive/general-query.css";
 
 import { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";

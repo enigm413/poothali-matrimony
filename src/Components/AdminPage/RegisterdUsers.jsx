@@ -41,7 +41,7 @@ export default function RegisteredUsers({ users, handleNewPage }) {
                   <td>
                     <button
                       className="btn"
-                      onClick={() => setNewPage("profile")}
+                      onClick={() => handleNewPage("profile")}
                     >
                       More Info
                     </button>

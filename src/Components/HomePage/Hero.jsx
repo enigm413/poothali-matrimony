@@ -14,16 +14,7 @@ export default function Hero() {
           soul."
         </p>
 
-        <button className="btn">Find Your Perfect Match</button>
-      </div>
-
-      <div className="hero-img-wrapper">
-        <img
-          src={heroImg}
-          alt="A couples enjoying the sunsets at hill station"
-          className="hero-img"
-          loading="lazy"
-        />
+        <button className="btn btn--hero">Find Your Perfect Match</button>
       </div>
     </section>
   );

@@ -13,6 +13,13 @@ export default function Navbar({ newPage, handleNewPage }) {
       >
         Admin Login
       </button>
+
+      <button
+        className="btn btn--menu"
+        onClick={() => handleNewPage("dashboard")}
+      >
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
     </header>
   );
 }

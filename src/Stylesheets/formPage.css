@@ -34,7 +34,6 @@
 .input-wrapper {
   display: flex;
   flex-direction: column;
-
   position: relative;
 }
 
@@ -66,7 +65,8 @@
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
 }
 
-.input-wrapper input:focus {
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
   outline: none;
   border-bottom: 4px solid #b35b00;
 }
@@ -89,7 +89,6 @@ input[type="radio"] {
 
 .input-wrapper textarea {
   resize: none;
-  height: 8rem;
 }
 
 .form-btn-wrapper {
@@ -100,8 +99,4 @@ input[type="radio"] {
 
 .form-btn-wrapper .btn {
   padding: 1.6rem 8rem;
-}
-
-.btn--next {
-  margin-left: auto;
 }

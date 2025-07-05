@@ -1,0 +1,118 @@
+/*-------------------------------*/
+/*----------MEDIUM_LAPTOP--------*/
+/*-------------------------------*/
+@media (max-width: 1287px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .navlink-list {
+    gap: 2.8rem;
+  }
+
+  .logo-img {
+    height: 4.8rem;
+  }
+
+  .btn--login {
+    font-size: 1.4rem;
+  }
+}
+
+/*-------------------------------*/
+/*----------SMALL_LAPTOP--------*/
+/*-------------------------------*/
+@media (max-width: 1125px) {
+  html {
+    font-size: 50%;
+  }
+
+  .title-wrapper {
+    padding-bottom: 8rem;
+  }
+
+  /******************************/
+  /*************NAVBAR***********/
+  /******************************/
+  .navlink-list {
+    gap: 2rem;
+  }
+
+  header .navlink {
+    font-size: 1.6rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------LARGE_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 957px) {
+  header .navlink-list {
+    display: none;
+  }
+
+  .btn--login {
+    display: none;
+  }
+
+  .btn--menu {
+    display: block;
+  }
+
+  footer {
+    padding: 6.4rem 2rem 2rem 2rem;
+  }
+
+  footer .navlink-list {
+    gap: 2.8rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------SMALL_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 625px) {
+  .navbar--home {
+    padding: 5.6rem 4rem;
+  }
+
+  footer {
+    padding: 6.4rem 1.6rem 2rem 1.6rem;
+  }
+
+  footer .navlink-list {
+    gap: 1.8rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------SMALL_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 475px) {
+  .navbar--home {
+    padding: 5.6rem 0.8rem;
+  }
+
+  footer {
+    padding: 6.4rem 2rem 2rem 2rem;
+    gap: 2rem;
+  }
+
+  footer .navlink-list {
+    flex-wrap: wrap;
+    padding: 2rem 0rem 2rem 0;
+  }
+
+  footer .navlink {
+    width: 45%;
+    padding-left: 2rem;
+  }
+
+  footer li:last-child {
+    width: 100%;
+  }
+
+  .copy {
+    text-align: left;
+  }
+}
