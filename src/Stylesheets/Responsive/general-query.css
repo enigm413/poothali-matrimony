@@ -47,12 +47,30 @@
 /*-----------LARGE_TABLET--------*/
 /*-------------------------------*/
 @media (max-width: 957px) {
-  header .navlink-list {
-    display: none;
+  header {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .btn--login {
-    display: none;
+  header .navlink-list {
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    );
+  }
+
+  header .navlink:link,
+  header .navlink:visited {
+    font-size: 2rem;
   }
 
   .btn--menu {
@@ -64,6 +82,7 @@
   }
 
   footer .navlink-list {
+    display: flex !important;
     gap: 2.8rem;
   }
 }
@@ -81,7 +100,12 @@
   }
 
   footer .navlink-list {
-    gap: 1.8rem;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  footer li {
+    width: 40%;
   }
 }
 
@@ -98,18 +122,8 @@
     gap: 2rem;
   }
 
-  footer .navlink-list {
-    flex-wrap: wrap;
-    padding: 2rem 0rem 2rem 0;
-  }
-
-  footer .navlink {
+  footer li {
     width: 45%;
-    padding-left: 2rem;
-  }
-
-  footer li:last-child {
-    width: 100%;
   }
 
   .copy {

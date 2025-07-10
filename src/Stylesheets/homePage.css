@@ -6,12 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-      rgba(214, 120, 5, 0.1),
-      rgba(217, 121, 4, 0.1)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
     url(../assets/Images/hero-img.webp);
-
   background-size: cover;
   height: 50vh;
   min-height: 61.6rem;
@@ -37,7 +33,8 @@
 
 .section-hero p {
   font-size: 2rem;
-  text-shadow: 0 0 1.2rem rgba(0, 0, 0);
+  font-weight: 450;
+  text-shadow: 0 0 2rem rgba(0, 0, 0);
   line-height: 1.8;
   padding-bottom: 4.4rem;
   letter-spacing: 1.6px;

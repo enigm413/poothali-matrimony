@@ -95,7 +95,8 @@ header {
   padding: 4rem 4.8rem;
 }
 
-header .navlink {
+header .navlink:link,
+header .navlink:visited {
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -118,12 +119,14 @@ nav {
 
 .navlink-list {
   display: flex;
+  align-items: center;
   gap: 3.2rem;
   list-style: none;
   text-decoration: none;
 }
 
-.navlink {
+.navlink:link,
+.navlink:visited {
   color: #570600;
   border: none;
   text-decoration: none;
@@ -131,22 +134,28 @@ nav {
   letter-spacing: 2px;
   background-color: transparent;
   cursor: pointer;
+  justify-self: center;
 }
 
-.navlink:hover {
+.navlink:hover,
+.navlink:active {
   color: #d97904;
+}
+
+.btn--login {
+  margin-left: auto;
 }
 
 .btn--menu {
   display: none;
   background-color: transparent;
-  color: #d97904;
+  color: #b35b00;
   font-size: 3.6rem;
 }
 
 .btn--menu:hover {
   background-color: transparent;
-  color: #b35b00;
+  color: #d97904;
 }
 
 footer {
@@ -157,7 +166,14 @@ footer {
   gap: 3.2rem;
 }
 
-footer .navlink {
+footer .navlink-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+}
+
+footer .navlink:link,
+footer .navlink:visited {
   font-size: 1.4rem;
   font-weight: 600;
   padding-bottom: 0.2rem;
@@ -166,6 +182,20 @@ footer .navlink {
 footer .navlink:hover,
 footer .navlink:active {
   color: rgba(87, 6, 0, 0.5);
+}
+
+footer .btn--login {
+  background-color: transparent;
+  color: #160c00;
+  padding: 0rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+footer .btn--login:hover {
+  color: rgba(87, 6, 0, 0.5);
+  background-color: transparent;
 }
 
 .copy {

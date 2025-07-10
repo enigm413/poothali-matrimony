@@ -2,7 +2,7 @@
 import logoImg from "../../assets/Images/logo.webp";
 import { pageLinks } from "../../Data/pageLinkData";
 
-export default function NavContents({ handleNewPage }) {
+export default function NavContents({ handleNewPage, isMenuOpen }) {
   return (
     <>
       <div className="logo-img-wrapper">
@@ -10,19 +10,29 @@ export default function NavContents({ handleNewPage }) {
       </div>
 
       <nav>
-        <ul className="navlink-list">
+        <ul
+          className={`navlink-list ${
+            window.innerWidth <= 957 && !isMenuOpen ? "display--none" : ""
+          }`}
+        >
           {pageLinks.map((link) => {
-            const { text, page } = link;
+            const { text, page, section } = link;
             return (
-              <li
-                className="navlink"
-                key={text}
-                onClick={() => handleNewPage(page)}
-              >
-                {text}
+              <li key={text} onClick={() => handleNewPage(page)}>
+                <a href={section} className="navlink">
+                  {text}
+                </a>
               </li>
             );
           })}
+          <li>
+            <button
+              className="btn btn--login"
+              onClick={() => handleNewPage("dashboard")}
+            >
+              Admin Login
+            </button>
+          </li>
         </ul>
       </nav>
     </>

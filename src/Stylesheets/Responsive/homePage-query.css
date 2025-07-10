@@ -146,7 +146,7 @@
   }
 
   .step-img-wrapper {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   /*------------------------------*/
@@ -204,10 +204,6 @@
     line-height: 1.4;
   }
 
-  .section-hero p {
-    font-size: 1.8rem;
-  }
-
   /*------------------------------*/
   /*-----SECTION_HOW_IT_WORKS-----*/
   /*------------------------------*/
@@ -263,11 +259,11 @@
   }
 
   .section-hero p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
-
   /*------------------------------*/
   /*-----SECTION_HOW_IT_WORKS-----*/
+
   /*------------------------------*/
 
   .section-how-it-works {

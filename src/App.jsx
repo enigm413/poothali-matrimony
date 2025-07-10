@@ -14,6 +14,7 @@ export default function App() {
   const [newPage, setNewPage] = useState(
     sessionStorage.getItem("currentPage") || "home"
   );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
@@ -37,6 +38,7 @@ export default function App() {
 
   const handleNewPage = (page) => {
     setNewPage(page);
+    setIsMenuOpen(!isMenuOpen);
     sessionStorage.setItem("currentPage", page);
   };
 
@@ -47,7 +49,12 @@ export default function App() {
 
   return (
     <>
-      <Navbar handleNewPage={handleNewPage} newPage={newPage} />
+      <Navbar
+        handleNewPage={handleNewPage}
+        newPage={newPage}
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+      />
       {newPage === "home" && <HomePage />}
 
       {newPage === "profiles" &&
