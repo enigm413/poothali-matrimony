@@ -3,7 +3,7 @@ import "./Stylesheets/Responsive/general-query.css";
 
 import { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient.js";
-import { Navbar, Footer, Error } from "./Components/Shared";
+import { Navbar, Footer, Error, LoginForm } from "./Components/Shared";
 import HomePage from "./Components/HomePage/";
 import AdminPage from "./Components/AdminPage/";
 import ProfilesPage from "./Components/ProfilesPage/";
@@ -15,9 +15,12 @@ export default function App() {
     sessionStorage.getItem("currentPage") || "home"
   );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
   const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
+
+  console.log(isLoginFormOpen);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +41,7 @@ export default function App() {
 
   const handleNewPage = (page) => {
     setNewPage(page);
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(false);
     sessionStorage.setItem("currentPage", page);
   };
 
@@ -54,7 +57,14 @@ export default function App() {
         newPage={newPage}
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
+        setIsLoginFormOpen={setIsLoginFormOpen}
       />
+
+      <LoginForm
+        isLoginFormOpen={isLoginFormOpen}
+        setIsLoginFormOpen={setIsLoginFormOpen}
+      />
+
       {newPage === "home" && <HomePage />}
 
       {newPage === "profiles" &&

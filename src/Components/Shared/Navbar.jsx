@@ -1,5 +1,4 @@
 //Importing Necessary Data
-import { useState } from "react";
 import NavContent from "./NavContents.jsx";
 
 // Function To Define Navbar Component
@@ -8,10 +7,15 @@ export default function Navbar({
   handleNewPage,
   isMenuOpen,
   setIsMenuOpen,
+  setIsLoginFormOpen,
 }) {
   return (
     <header className={newPage === "home" ? "navbar--home" : "navbar--page"}>
-      <NavContent handleNewPage={handleNewPage} isMenuOpen={isMenuOpen} />
+      <NavContent
+        handleNewPage={handleNewPage}
+        isMenuOpen={isMenuOpen}
+        setIsLoginFormOpen={setIsLoginFormOpen}
+      />
 
       <button
         className="btn btn--menu"

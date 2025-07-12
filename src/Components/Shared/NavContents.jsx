@@ -2,7 +2,11 @@
 import logoImg from "../../assets/Images/logo.webp";
 import { pageLinks } from "../../Data/pageLinkData";
 
-export default function NavContents({ handleNewPage, isMenuOpen }) {
+export default function NavContents({
+  handleNewPage,
+  isMenuOpen,
+  setIsLoginFormOpen,
+}) {
   return (
     <>
       <div className="logo-img-wrapper">
@@ -28,7 +32,7 @@ export default function NavContents({ handleNewPage, isMenuOpen }) {
           <li>
             <button
               className="btn btn--login"
-              onClick={() => handleNewPage("dashboard")}
+              onClick={() => setIsLoginFormOpen(true)}
             >
               Admin Login
             </button>
