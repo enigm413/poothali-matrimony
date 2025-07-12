@@ -66,6 +66,7 @@
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
     );
+    z-index: 1;
   }
 
   header .navlink:link,
@@ -75,6 +76,7 @@
 
   .btn--menu {
     display: block;
+    z-index: 2;
   }
 
   footer {
@@ -88,11 +90,24 @@
 }
 
 /*-------------------------------*/
+/*-----------TABLET--------------*/
+/*-------------------------------*/
+@media (max-width: 803px) {
+  .login-form {
+    width: 70%;
+  }
+}
+
+/*-------------------------------*/
 /*-----------SMALL_TABLET--------*/
 /*-------------------------------*/
 @media (max-width: 625px) {
   .navbar--home {
     padding: 5.6rem 4rem;
+  }
+
+  .login-form {
+    width: 90%;
   }
 
   footer {
@@ -115,6 +130,10 @@
 @media (max-width: 475px) {
   .navbar--home {
     padding: 5.6rem 0.8rem;
+  }
+
+  .login-form-title {
+    font-size: 2.3rem;
   }
 
   header .navlink-list {

@@ -14,6 +14,7 @@ export default function Navbar({
       <NavContent
         handleNewPage={handleNewPage}
         isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
         setIsLoginFormOpen={setIsLoginFormOpen}
       />
 

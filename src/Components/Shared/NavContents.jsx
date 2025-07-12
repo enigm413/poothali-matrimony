@@ -6,7 +6,14 @@ export default function NavContents({
   handleNewPage,
   isMenuOpen,
   setIsLoginFormOpen,
+  setIsMenuOpen,
 }) {
+  // Function To Handle Admin Page
+  const handleAdminPage = () => {
+    setIsMenuOpen(false);
+    setIsLoginFormOpen(true);
+  };
+
   return (
     <>
       <div className="logo-img-wrapper">
@@ -30,10 +37,7 @@ export default function NavContents({
             );
           })}
           <li>
-            <button
-              className="btn btn--login"
-              onClick={() => setIsLoginFormOpen(true)}
-            >
+            <button className="btn btn--login" onClick={handleAdminPage}>
               Admin Login
             </button>
           </li>
