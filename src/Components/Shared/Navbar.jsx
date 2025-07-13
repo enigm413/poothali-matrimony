@@ -8,6 +8,7 @@ export default function Navbar({
   isMenuOpen,
   setIsMenuOpen,
   setIsLoginFormOpen,
+  setUserRole,
 }) {
   return (
     <header className={newPage === "home" ? "navbar--home" : "navbar--page"}>
@@ -16,6 +17,7 @@ export default function Navbar({
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         setIsLoginFormOpen={setIsLoginFormOpen}
+        setUserRole={setUserRole}
       />
 
       <button

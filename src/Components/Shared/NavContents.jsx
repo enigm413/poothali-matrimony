@@ -7,11 +7,13 @@ export default function NavContents({
   isMenuOpen,
   setIsLoginFormOpen,
   setIsMenuOpen,
+  setUserRole,
 }) {
   // Function To Handle Admin Page
-  const handleAdminPage = () => {
+  const handleAdminLogin = () => {
     setIsMenuOpen(false);
     setIsLoginFormOpen(true);
+    setUserRole("admin");
   };
 
   return (
@@ -37,7 +39,7 @@ export default function NavContents({
             );
           })}
           <li>
-            <button className="btn btn--login" onClick={handleAdminPage}>
+            <button className="btn btn--login" onClick={handleAdminLogin}>
               Admin Login
             </button>
           </li>

@@ -3,7 +3,7 @@ import { contactOptions } from "../../Data/adminContactData";
 // Function to define Contact Component
 export default function Contact() {
   return (
-    <section className="section-contact">
+    <section className="section-contact" id="section-contact">
       <div className="contact-wrapper wrapper">
         <article className="contact-txt-wrapper">
           <h2 className="contact-title">Get in Touch & Set Up Your Account!</h2>

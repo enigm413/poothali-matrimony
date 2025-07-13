@@ -4,7 +4,7 @@ import { galleryImages } from "../../Data/galleryData";
 // Function to define Gallery Component
 export default function Gallery() {
   return (
-    <section className="section-gallery">
+    <section className="section-gallery" id="section-gallery">
       <div className="wrapper title-wrapper justify-content--center">
         <h2 className="section-title">gallery</h2>
       </div>
