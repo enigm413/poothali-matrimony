@@ -12,12 +12,10 @@ export default function ProfileCard({ handleMoreInfo, ...profile }) {
       </div>
 
       <div className="profile-card-text-wrapper">
-        <div className="profile-card-title-wrapper">
-          <p className="name">{name}</p>
-          <p className="age">{age} Years</p>
-        </div>
+        <p className="profile-card-title">{name}</p>
 
         <ul className="profile-card-content-wrapper">
+          <li>{age} Years</li>
           <li>{religion}</li>
           <li>{location}</li>
         </ul>

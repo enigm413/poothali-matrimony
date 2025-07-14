@@ -7,7 +7,13 @@ export default function Profiles({ users, handleMoreInfo }) {
     <section className="section-profiles">
       <div className="title-wrapper wrapper justify-content--space-between ">
         <h1 className="profiles-title">Browse Admin-Verified Profiles</h1>
-        <button className="btn btn--filter">Filter &#11206;</button>
+        <button className="btn btn--filter">
+          {window.innerWidth <= 625 ? (
+            <ion-icon name="filter"></ion-icon>
+          ) : (
+            <>Filter &#11206;</>
+          )}
+        </button>
       </div>
 
       <div className="profiles-wrapper wrapper">

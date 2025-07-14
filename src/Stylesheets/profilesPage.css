@@ -3,7 +3,7 @@
 /*------------------------------*/
 
 .section-profiles {
-  padding: 9.6rem 0rem 9.6rem 0rem;
+  padding: 9.6rem 4rem 9.6rem 4rem;
 }
 
 .section-profiles .title-wrapper {
@@ -58,35 +58,31 @@
   letter-spacing: 2px;
 }
 
-.profile-card-title-wrapper,
+.profile-card-title,
 .profile-card-content-wrapper {
   transform: translateX(5%);
   text-shadow: 0rem 0rem 2rem rgb(0, 0, 0);
 }
 
-.profile-card-title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.profile-card-title {
+  font-size: 2.3rem;
   font-weight: 700;
-  padding-bottom: 1.6rem;
-}
-
-.profile-card-title-wrapper .name {
-  font-size: 2rem;
-}
-
-.profile-card-title-wrapper .age {
-  font-size: 1.8rem;
+  padding-bottom: 2rem;
 }
 
 .profile-card-content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.2rem;
   font-style: italic;
-  padding-bottom: 2rem;
+  padding-bottom: 2.8rem;
   list-style: none;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.profile-card-content-wrapper li:last-child {
+  grid-column: span 2;
 }
 
 .btn--info {

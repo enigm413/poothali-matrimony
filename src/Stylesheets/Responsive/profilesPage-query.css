@@ -1,0 +1,106 @@
+/*-------------------------------*/
+/*----------MEDIUM_LAPTOP--------*/
+/*-------------------------------*/
+@media (max-width: 1287px) {
+  .section-profiles {
+    padding: 9.6rem 3.2rem 9.6rem 3.2rem;
+  }
+}
+
+/*-------------------------------*/
+/*----------SMALL_LAPTOP--------*/
+/*-------------------------------*/
+@media (max-width: 1125px) {
+  .section-profiles {
+    padding: 9.6rem 2.4rem 9.6rem 2.4rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------LARGE_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 957px) {
+  .section-profiles {
+    padding: 9.6rem 4.8rem 9.6rem 4.8rem;
+  }
+
+  .profiles-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 8rem 6.4rem 8rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------TABLET--------------*/
+/*-------------------------------*/
+@media (max-width: 803px) {
+  .section-profiles {
+    padding: 9.6rem 2rem 9.6rem 2rem;
+  }
+
+  .profiles-wrapper {
+    padding: 0 0.8rem 6.4rem 0.8rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------SMALL_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 625px) {
+  .section-profiles {
+    padding: 9.6rem 2rem 9.6rem 2rem;
+  }
+
+  .profiles-title {
+    font-size: 2.5rem;
+  }
+
+  .btn--filter {
+    font-size: 3.2rem;
+    background-color: transparent;
+    color: #b35b00;
+    padding: 0;
+  }
+
+  .btn--filter:hover {
+    color: #d97904;
+    background-color: transparent;
+  }
+
+  .profiles-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .profile-card {
+    max-width: 65%;
+  }
+}
+
+/*-------------------------------*/
+/*-----------SMALL_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 475px) {
+  .section-profiles {
+    padding: 9.6rem 1.2rem 9.6rem 1.2rem;
+  }
+
+  .profile-card {
+    max-width: 100%;
+  }
+
+  .profiles-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .btn--filter {
+    padding-top: 0.4rem;
+    font-size: 2rem;
+  }
+
+  .section-profiles .title-wrapper {
+    padding: 3.2rem 2rem;
+    align-items: center;
+  }
+}

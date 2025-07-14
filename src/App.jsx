@@ -46,6 +46,7 @@ export default function App() {
     setPrevPage(newPage);
     setNewPage(page);
     sessionStorage.setItem("currentPage", page);
+    setIsMenuOpen(false);
   };
 
   // Function To Handle More Info
