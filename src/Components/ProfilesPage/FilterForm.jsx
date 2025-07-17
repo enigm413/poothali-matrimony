@@ -45,7 +45,7 @@ export default function FilterForm({
           {filterError}
         </p>
 
-        <button className="btn btn--close" onClick={() => handleCloseFilter}>
+        <button className="btn btn--close" onClick={handleCloseFilter}>
           <ion-icon name="close"></ion-icon>
         </button>
 

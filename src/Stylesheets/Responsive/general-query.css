@@ -17,8 +17,11 @@
   .btn--login {
     font-size: 1.4rem;
   }
-}
 
+  .error-wrapper {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
 /*-------------------------------*/
 /*----------SMALL_LAPTOP--------*/
 /*-------------------------------*/
@@ -31,15 +34,20 @@
     padding-bottom: 8rem;
   }
 
-  /******************************/
-  /*************NAVBAR***********/
-  /******************************/
   .navlink-list {
     gap: 2rem;
   }
 
   header .navlink {
     font-size: 1.6rem;
+  }
+
+  .error-wrapper {
+    grid-template-columns: 1fr 1.1fr;
+  }
+
+  .error-text {
+    font-size: 2rem;
   }
 }
 
@@ -79,6 +87,16 @@
     z-index: 2;
   }
 
+  .error-wrapper {
+    grid-template-columns: 1fr;
+    padding-top: 8rem;
+    width: 50%;
+  }
+
+  .error-text-wrapper {
+    padding: 0;
+  }
+
   footer {
     padding: 6.4rem 2rem 2rem 2rem;
   }
@@ -96,6 +114,10 @@
   .login-form {
     width: 70%;
   }
+
+  .error-wrapper {
+    width: 70%;
+  }
 }
 
 /*-------------------------------*/
@@ -107,6 +129,10 @@
   }
 
   .login-form {
+    width: 90%;
+  }
+
+  .error-wrapper {
     width: 90%;
   }
 
@@ -140,6 +166,10 @@
     font-size: 2.3rem;
   }
 
+  .error-title {
+    font-size: 2.5rem;
+  }
+
   header .navlink-list {
     height: 60vh;
     gap: 2.4rem;
@@ -152,7 +182,7 @@
 
   footer {
     padding: 6.4rem 2rem 2rem 2rem;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   footer li {

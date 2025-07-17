@@ -233,10 +233,14 @@ footer .btn--login:hover {
   width: 100%;
 }
 
+.error-text-wrapper {
+  padding-left: 4rem;
+}
+
 .error-title {
   font-size: 3.2rem;
   font-weight: 600;
-  padding-bottom: 4rem;
+  padding-bottom: 2.8rem;
   color: #b35b00;
   text-align: center;
 }
@@ -244,7 +248,7 @@ footer .btn--login:hover {
 .error-text {
   font-size: 1.8rem;
   line-height: 1.8;
-  padding-bottom: 3.2rem;
+  padding-bottom: 4rem;
 }
 
 /******************************/

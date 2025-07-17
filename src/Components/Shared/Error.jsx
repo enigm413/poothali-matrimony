@@ -1,6 +1,6 @@
 import errorImg from "../../assets/Images/error.webp";
 
-export default function Error() {
+export default function Error({ handleNewPage }) {
   return (
     <article className="error-wrapper wrapper">
       <div className="error-text-wrapper">
@@ -10,7 +10,7 @@ export default function Error() {
           few minutes. If the issue continues, please contact the administrator.
         </p>
 
-        <a href="#" className="btn">
+        <a href="#" className="btn" onClick={() => handleNewPage("home")}>
           Back To Home
         </a>
       </div>

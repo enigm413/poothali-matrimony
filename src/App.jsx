@@ -146,9 +146,11 @@ export default function App() {
 
   // Function To Handle Close Filter
   const handleCloseFilter = () => {
-    setIsFilterFormOpen(false);
     setFilterError("");
+    setIsFilterFormOpen(false);
   };
+
+  console.log();
 
   return (
     <>
@@ -171,7 +173,7 @@ export default function App() {
 
       {newPage === "profiles" &&
         (isError ? (
-          <Error />
+          <Error handleNewPage={handleNewPage} />
         ) : (
           <ProfilesPage
             users={filteredUsers.length ? filteredUsers : users}
@@ -194,7 +196,10 @@ export default function App() {
       {newPage === "profile" && <ProfilePage {...user} />}
 
       {newPage === "form" && <FormPage />}
-      <Footer handleNewPage={handleNewPage} />
+      <Footer
+        handleNewPage={handleNewPage}
+        handleAdminLogin={handleAdminLogin}
+      />
     </>
   );
 }
