@@ -5,19 +5,16 @@ import NavContent from "./NavContents.jsx";
 export default function Navbar({
   newPage,
   handleNewPage,
+  handleAdminLogin,
   isMenuOpen,
   setIsMenuOpen,
-  setIsLoginFormOpen,
-  setUserRole,
 }) {
   return (
     <header className={newPage === "home" ? "navbar--home" : "navbar--page"}>
       <NavContent
         handleNewPage={handleNewPage}
         isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        setIsLoginFormOpen={setIsLoginFormOpen}
-        setUserRole={setUserRole}
+        handleAdminLogin={handleAdminLogin}
       />
 
       <button

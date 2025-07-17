@@ -4,18 +4,9 @@ import { pageLinks } from "../../Data/pageLinkData";
 
 export default function NavContents({
   handleNewPage,
+  handleAdminLogin,
   isMenuOpen,
-  setIsLoginFormOpen,
-  setIsMenuOpen,
-  setUserRole,
 }) {
-  // Function To Handle Admin Page
-  const handleAdminLogin = () => {
-    setIsMenuOpen(false);
-    setIsLoginFormOpen(true);
-    setUserRole("admin");
-  };
-
   return (
     <>
       <div className="logo-img-wrapper">

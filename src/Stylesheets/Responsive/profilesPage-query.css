@@ -38,6 +38,10 @@
     padding: 9.6rem 2rem 9.6rem 2rem;
   }
 
+  .filter-form {
+    width: 70%;
+  }
+
   .profiles-wrapper {
     padding: 0 0.8rem 6.4rem 0.8rem;
   }
@@ -51,12 +55,16 @@
     padding: 9.6rem 2rem 9.6rem 2rem;
   }
 
+  .filter-form {
+    width: 90%;
+  }
+
   .profiles-title {
     font-size: 2.5rem;
   }
 
   .btn--filter {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     background-color: transparent;
     color: #b35b00;
     padding: 0;
@@ -85,6 +93,11 @@
     padding: 9.6rem 1.2rem 9.6rem 1.2rem;
   }
 
+  .filter-form-title {
+    font-size: 2.3rem;
+    text-align: left;
+  }
+
   .profile-card {
     max-width: 100%;
   }
@@ -96,7 +109,7 @@
 
   .btn--filter {
     padding-top: 0.4rem;
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 
   .section-profiles .title-wrapper {
