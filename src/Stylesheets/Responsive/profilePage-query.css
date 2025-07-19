@@ -1,0 +1,98 @@
+/*-------------------------------*/
+/*----------MEDIUM_LAPTOP--------*/
+/*-------------------------------*/
+@media (max-width: 1287px) {
+  .section-profile {
+    padding: 9.6rem 2.4rem 9.6rem 2.4rem;
+  }
+
+  .profile-wrapper {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+/*-------------------------------*/
+/*----------SMALL_LAPTOP--------*/
+/*-------------------------------*/
+@media (max-width: 1125px) {
+  .section-profile {
+    padding: 9.6rem 2rem 9.6rem 2rem;
+  }
+  .profile-wrapper {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+
+/*-------------------------------*/
+/*-----------LARGE_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 957px) {
+  .section-profile {
+    padding: 9.6rem 0.8rem 9.6rem 0.8rem;
+  }
+
+  .profile-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------TABLET--------------*/
+/*-------------------------------*/
+@media (max-width: 803px) {
+  .section-profile {
+    padding: 9.6rem;
+  }
+
+  .profile-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 0.8rem;
+    gap: 8rem;
+  }
+
+  .profile-header {
+    position: static;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .profile-details-wrapper {
+    gap: 8rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------SMALL_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 625px) {
+  .section-profile {
+    padding: 9.6rem 4.8rem 9.6rem 4.8rem;
+  }
+
+  .profile-header {
+    width: 90%;
+  }
+
+  .profile-name {
+    font-size: 2.5rem;
+  }
+}
+
+/*-------------------------------*/
+/*-----------SMALL_TABLET--------*/
+/*-------------------------------*/
+@media (max-width: 475px) {
+  .section-profile {
+    padding: 9.6rem 1.2rem 9.6rem 1.2rem;
+  }
+
+  .profile-header {
+    width: 100%;
+  }
+
+  .profile-name {
+    font-size: 2.3rem;
+  }
+}

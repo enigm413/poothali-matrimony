@@ -1,6 +1,15 @@
-function ProfileCategory({ category, fields, ...data }) {
+export default function ProfileCategory({
+  userRole,
+  category,
+  fields,
+  ...data
+}) {
   return (
-    <article className="profile-category-wrapper">
+    <article
+      className={`profile-category-wrapper  ${
+        userRole !== "admin" && category === "contact" ? "display--none" : ""
+      }`}
+    >
       <h2 className="profile-category-title">{category} information</h2>
 
       <ul className="profile-detail-list">
@@ -19,4 +28,3 @@ function ProfileCategory({ category, fields, ...data }) {
     </article>
   );
 }
-export default ProfileCategory;

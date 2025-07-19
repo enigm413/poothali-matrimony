@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function ProfileGallery({ first_img, second_img, third_img }) {
+export default function ProfileGallery({
+  first_img,
+  second_img,
+  third_img,
+  name,
+}) {
   const [mainImg, setMainImg] = useState(first_img);
 
   return (

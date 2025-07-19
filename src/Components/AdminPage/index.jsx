@@ -2,11 +2,11 @@ import SummaryCards from "./SummaryCards";
 import RegisteredUsers from "./RegisterdUsers";
 import "../../Stylesheets/adminPage.css";
 
-export default function adminPage({ users, handleNewPage }) {
+export default function AdminPage({ users, handleMoreInfo }) {
   return (
     <>
-      <SummaryCards totalUser={users.length} />
-      <RegisteredUsers users={users} handleNewPage={handleNewPage} />
+      <SummaryCards totalUsers={users.length} />
+      <RegisteredUsers users={users} handleMoreInfo={handleMoreInfo} />
     </>
   );
 }

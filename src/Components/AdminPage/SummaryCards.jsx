@@ -1,18 +1,12 @@
-import { summaryCards } from "../../Data/dashboardData";
-
-export default function SummaryCards() {
+export default function SummaryCards({ totalUsers }) {
+  console.log(totalUsers);
   return (
     <section className="section-summary-cards" id="section-admin-page">
       <div className="summary-cards wrapper">
-        {summaryCards.map((card) => {
-          const { id, title, text } = card;
-          return (
-            <article className="summary-card" key={id}>
-              <p className="summary-card-title">{title}</p>
-              <p className="summary-card-text">{text}</p>
-            </article>
-          );
-        })}
+        <article className="summary-card">
+          <p className="summary-card-title">Total Profiles</p>
+          <p className="summary-card-text">{totalUsers}</p>
+        </article>
       </div>
     </section>
   );

@@ -2,18 +2,19 @@ import { fieldTitles } from "../../Data/profilesData.js";
 import ProfileCategory from "./ProfileCategory";
 import ProfileGallery from "./ProfileGallery";
 
-export default function Profile({ ...profile }) {
-  const { first_img, second_img, third_img, birth_chart, ...data } = profile;
+export default function Profile({ userRole, ...profile }) {
+  const { first_img, second_img, third_img, name, birth_chart, ...data } =
+    profile;
   return (
     <section className="section-profile">
       <div className="profile-wrapper wrapper">
         <div className="profile-header">
-          <h1 className="profile-name">{profile.name}</h1>
-
+          <h1 className="profile-name">{name}</h1>
           <ProfileGallery
             first_img={first_img}
             second_img={second_img}
             third_img={third_img}
+            name={name}
           />
 
           <div className="birth-chart-wrapper">
@@ -26,17 +27,17 @@ export default function Profile({ ...profile }) {
               />
             </div>
           </div>
-
-          <div className="profile-btns">
-            <button className="btn btn--profile">Edit Profile </button>
-            <button className="btn btn--profile">Delete Profile</button>
-          </div>
         </div>
 
         <div className="profile-details-wrapper">
           {fieldTitles.map((fieldTitle) => {
             return (
-              <ProfileCategory key={fieldTitle.id} {...fieldTitle} {...data} />
+              <ProfileCategory
+                key={fieldTitle.id}
+                userRole={userRole}
+                {...fieldTitle}
+                {...data}
+              />
             );
           })}
         </div>

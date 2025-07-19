@@ -1,6 +1,6 @@
 import { tableHeader } from "../../Data/dashboardData";
 
-export default function RegisteredUsers({ users, handleNewPage }) {
+export default function RegisteredUsers({ users, handleMoreInfo }) {
   return (
     <section className="section-registered-users" id="section-registered-us">
       <div className="wrapper title-wrapper">
@@ -14,10 +14,7 @@ export default function RegisteredUsers({ users, handleNewPage }) {
             placeholder="Enter the User Id"
             className="searchbar"
           />
-          <button className="btn" onClick={() => handleNewPage("form")}>
-            Add New User
-          </button>
-          <button className="btn">Notification &#11206; </button>
+          <button className="btn">Add New User</button>
         </div>
 
         <table className="reg-user-table">
@@ -35,15 +32,33 @@ export default function RegisteredUsers({ users, handleNewPage }) {
               const { id, name, age, religion, location } = user;
               return (
                 <tr className="row" key={id}>
-                  {[id, name, age, religion, location].map((val, index) => {
+                  {[name, age, religion, location].map((val, index) => {
                     return <td key={index}>{val}</td>;
                   })}
                   <td>
                     <button
                       className="btn"
-                      onClick={() => handleNewPage("profile")}
+                      onClick={() => handleMoreInfo(user)}
                     >
                       More Info
+                    </button>
+                  </td>
+
+                  <td>
+                    <button
+                      className="btn btn--edit"
+                      onClick={() => handleNewPage("profile")}
+                    >
+                      <ion-icon name="create"></ion-icon>
+                    </button>
+                  </td>
+
+                  <td>
+                    <button
+                      className="btn btn--delete"
+                      onClick={() => handleNewPage("profile")}
+                    >
+                      <ion-icon name="close"></ion-icon>
                     </button>
                   </td>
                 </tr>

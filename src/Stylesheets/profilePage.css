@@ -3,7 +3,7 @@
 /*-------------------------------*/
 
 .section-profile {
-  padding: 9.6rem 0rem 9.6rem 0rem;
+  padding: 9.6rem 4.8rem 9.6rem 4.8rem;
 }
 
 .profile-wrapper {
@@ -18,14 +18,14 @@
   flex-direction: column;
   gap: 4rem;
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.4);
-  padding: 4rem;
+  padding: 4.8rem 4rem;
   border-radius: 1.6rem;
   position: sticky;
   top: 0;
 }
 
 .profile-name {
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   letter-spacing: 1.5px;
   text-align: center;
   font-style: italic;
@@ -89,17 +89,6 @@
   text-align: center;
   font-weight: 600;
   letter-spacing: 1.2px;
-}
-
-.profile-btns {
-  display: flex;
-  gap: 3.2rem;
-  justify-content: center;
-  border-radius: 1.2rem;
-}
-
-.btn--profile {
-  padding: 1.2rem 2.8rem;
 }
 
 .profile-details-wrapper {

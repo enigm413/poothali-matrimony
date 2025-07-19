@@ -15,7 +15,9 @@ export default function App() {
   const [newPage, setNewPage] = useState(
     sessionStorage.getItem("currentPage") || "home"
   );
-  const [userRole, setUserRole] = useState("normal");
+  const [userRole, setUserRole] = useState(
+    sessionStorage.getItem("currentUser") || "nonRegUser"
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
   const [isFilterFormOpen, setIsFilterFormOpen] = useState(false);
@@ -24,7 +26,10 @@ export default function App() {
   const [filterError, setFilterError] = useState("");
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(() => {
+    const profile = sessionStorage.getItem("currentProfile");
+    return profile ? JSON.parse(profile) : {};
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,20 +58,21 @@ export default function App() {
       setLoginError("");
       loginForm.reset();
       setIsLoginFormOpen(false);
-      setUserRole("normal");
+      handleUserRole("admin");
       handleNewPage("dashboard");
     }
   };
 
-  //Function To Handle User Previlage
+  //Function To Handle Registered User Previlage
   const handleProfilePage = (error, loginForm) => {
     if (error) {
       setLoginError("⚠️ Sorry, this account does not exist");
     } else {
       setLoginError("");
-      setIsLoginFormOpen(false);
-      handleNewPage("profile");
       loginForm.reset();
+      setIsLoginFormOpen(false);
+      handleUserRole("regUser");
+      handleNewPage("profile");
     }
   };
 
@@ -94,18 +100,32 @@ export default function App() {
     setIsMenuOpen(false);
   };
 
+  // Function To Handle New User Role
+  const handleUserRole = (role) => {
+    setUserRole(role);
+    sessionStorage.setItem("CurrentRole", role);
+  };
+
   // Function To Handle More Info
   const handleMoreInfo = (userData) => {
-    setIsLoginFormOpen(true);
+    if (userRole !== "nonRegUser") {
+      handleNewPage("profile");
+    } else {
+      setIsLoginFormOpen(true);
+    }
     setUser(userData);
+    sessionStorage.setItem("currentProfile", JSON.stringify(userData));
     window.scrollTo({ top: 0 });
   };
 
   // Function To Handle Admin Page
   const handleAdminLogin = () => {
+    if (userRole === "admin") {
+      setIsLoginFormOpen(false);
+      handleNewPage("admin");
+    }
     setIsMenuOpen(false);
     setIsLoginFormOpen(true);
-    setUserRole("admin");
   };
 
   // Function To Handle Login Form
@@ -115,10 +135,10 @@ export default function App() {
     const formData = new FormData(loginForm);
     const loginData = Object.fromEntries(formData);
     const { data, error } = await supabase.auth.signInWithPassword(loginData);
-    if (userRole === "admin") {
-      handleAdminPage(error, data?.user?.email, loginForm);
-    } else {
+    if (newPage === "profiles") {
       handleProfilePage(error, loginForm);
+    } else {
+      handleAdminPage(error, data?.user?.email, loginForm);
     }
   };
 
@@ -149,8 +169,6 @@ export default function App() {
     setFilterError("");
     setIsFilterFormOpen(false);
   };
-
-  console.log();
 
   return (
     <>
@@ -186,14 +204,14 @@ export default function App() {
           />
         ))}
 
+      {newPage === "profile" && <ProfilePage {...user} userRole={userRole} />}
+
       {newPage === "dashboard" &&
         (isError ? (
           <Error />
         ) : (
-          <AdminPage users={users} handleNewPage={handleNewPage} />
+          <AdminPage users={users} handleMoreInfo={handleMoreInfo} />
         ))}
-
-      {newPage === "profile" && <ProfilePage {...user} />}
 
       {newPage === "form" && <FormPage />}
       <Footer

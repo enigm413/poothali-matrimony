@@ -1,10 +1,11 @@
 import "../../Stylesheets/profilePage.css";
+import "../../Stylesheets/Responsive/profilePage-query.css";
 import Profile from "./Profile";
 
-export default function ProfilePage({ ...user }) {
+export default function ProfilePage({ userRole, ...user }) {
   return (
     <>
-      <Profile {...user} />
+      <Profile userRole={userRole} {...user} />
     </>
   );
 }
