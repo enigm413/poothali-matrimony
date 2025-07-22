@@ -16,7 +16,7 @@ export default function App() {
     sessionStorage.getItem("currentPage") || "home"
   );
   const [userRole, setUserRole] = useState(
-    sessionStorage.getItem("currentUser") || "nonRegUser"
+    sessionStorage.getItem("currentRole") || "nonRegUser"
   );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
@@ -30,6 +30,8 @@ export default function App() {
     const profile = sessionStorage.getItem("currentProfile");
     return profile ? JSON.parse(profile) : {};
   });
+  const [userId, setUserId] = useState("");
+  const [imageUrls, setImageUrls] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +43,7 @@ export default function App() {
       if (error) {
         setIsError(true);
       } else {
+        console.log(data);
         setUsers(data);
       }
     };
@@ -93,6 +96,28 @@ export default function App() {
     setFilteredUsers(filteredProfiles);
   };
 
+  //Function To Handle Upload Files
+  const handleUploadFiles = async (files, fileNames) => {
+    for (let val = 0; val < files.length; val++) {
+      const { error } = await supabase.storage
+        .from("profile-imgs")
+        .upload(`${userId}/${fileNames[val]}.jpg`, files[val]);
+
+      if (error) {
+        alert(`${error.message} for ${fileNames[val]}`);
+      } else {
+        const { data } = supabase.storage
+          .from("profile-imgs")
+          .getPublicUrl(`${userId}/${fileNames[val]}.jpg`);
+        setImageUrls((prev) => ({
+          ...prev,
+          [fileNames[val]]: data.publicUrl,
+        }));
+        alert(`${fileNames[val]} has successfully uploaded`);
+      }
+    }
+  };
+
   //Function To Handle New Page
   const handleNewPage = (page) => {
     setNewPage(page);
@@ -103,7 +128,7 @@ export default function App() {
   // Function To Handle New User Role
   const handleUserRole = (role) => {
     setUserRole(role);
-    sessionStorage.setItem("CurrentRole", role);
+    sessionStorage.setItem("currentRole", role);
   };
 
   // Function To Handle More Info
@@ -121,7 +146,6 @@ export default function App() {
   // Function To Handle Admin Page
   const handleAdminLogin = () => {
     if (userRole === "admin") {
-      setIsLoginFormOpen(false);
       handleNewPage("admin");
     }
     setIsMenuOpen(false);
@@ -170,6 +194,52 @@ export default function App() {
     setIsFilterFormOpen(false);
   };
 
+  // Function To Handle Sign Up Form
+  const handleSignUpForm = async (event) => {
+    event.preventDefault();
+    const signUpForm = event.currentTarget;
+    const formdata = new FormData(signUpForm);
+    const userData = Object.fromEntries(formdata);
+    const { data, error } = await supabase.auth.signUp(userData);
+    if (error) {
+      alert(error.message);
+    } else {
+      setUserId(data?.user?.id);
+      signUpForm.reset();
+      alert("User Credential successfully Created");
+    }
+  };
+
+  // Function To Handle Files Form
+  const handleFilesForm = (event) => {
+    event.preventDefault();
+    const filesForm = event.currentTarget;
+    const formdata = new FormData(filesForm);
+    const userData = Object.fromEntries(formdata);
+    const userFileNames = Object.keys(userData);
+    const userFiles = Object.values(userData);
+    handleUploadFiles(userFiles, userFileNames);
+  };
+
+  // Function To Handle Profile Form
+  const handleProfileForm = async (event) => {
+    event.preventDefault();
+
+    const profileForm = event.currentTarget;
+    const formdata = new FormData(profileForm);
+    const formDataObj = Object.fromEntries(formdata);
+    const userData = { user_id: userId, ...formDataObj, ...imageUrls };
+    const { error } = await supabase.from("RegisteredUsers").insert(userData);
+    if (error) {
+      console.log(error.message);
+    } else {
+      profileForm.reset();
+      alert("User Registeration has completed");
+      setImageUrls({});
+      setUserId("");
+    }
+  };
+
   return (
     <>
       <Navbar
@@ -178,6 +248,7 @@ export default function App() {
         newPage={newPage}
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
+        userRole={userRole}
       />
 
       <LoginForm
@@ -210,10 +281,21 @@ export default function App() {
         (isError ? (
           <Error />
         ) : (
-          <AdminPage users={users} handleMoreInfo={handleMoreInfo} />
+          <AdminPage
+            users={users}
+            handleMoreInfo={handleMoreInfo}
+            handleNewPage={handleNewPage}
+          />
         ))}
 
-      {newPage === "form" && <FormPage />}
+      {newPage === "form" && (
+        <FormPage
+          handleSignUpForm={handleSignUpForm}
+          handleFilesForm={handleFilesForm}
+          handleProfileForm={handleProfileForm}
+          handleNewPage={handleNewPage}
+        />
+      )}
       <Footer
         handleNewPage={handleNewPage}
         handleAdminLogin={handleAdminLogin}

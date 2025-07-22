@@ -1,10 +1,10 @@
 export default function ProfileCard({ handleMoreInfo, ...profile }) {
-  const { first_img, name, age, religion, location } = profile;
+  const { profile_img_01, name, age, religion, location } = profile;
   return (
     <article className="profile-card">
       <div className="profile-card-img-wrapper">
         <img
-          src={first_img}
+          src={profile_img_01}
           alt={name}
           className="profile-card-img"
           loading="lazy"

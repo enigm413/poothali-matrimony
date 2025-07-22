@@ -1,5 +1,4 @@
 export default function SummaryCards({ totalUsers }) {
-  console.log(totalUsers);
   return (
     <section className="section-summary-cards" id="section-admin-page">
       <div className="summary-cards wrapper">

@@ -1,6 +1,10 @@
 import { tableHeader } from "../../Data/dashboardData";
 
-export default function RegisteredUsers({ users, handleMoreInfo }) {
+export default function RegisteredUsers({
+  users,
+  handleMoreInfo,
+  handleNewPage,
+}) {
   return (
     <section className="section-registered-users" id="section-registered-us">
       <div className="wrapper title-wrapper">
@@ -14,7 +18,11 @@ export default function RegisteredUsers({ users, handleMoreInfo }) {
             placeholder="Enter the User Id"
             className="searchbar"
           />
-          <button className="btn">Add New User</button>
+
+          {/* <button className="btn">Search</button> */}
+          <button className="btn" onClick={() => handleNewPage("form")}>
+            Add New User
+          </button>
         </div>
 
         <table className="reg-user-table">
@@ -47,7 +55,7 @@ export default function RegisteredUsers({ users, handleMoreInfo }) {
                   <td>
                     <button
                       className="btn btn--edit"
-                      onClick={() => handleNewPage("profile")}
+                      onClick={() => handleNewPage("form")}
                     >
                       <ion-icon name="create"></ion-icon>
                     </button>
@@ -56,7 +64,7 @@ export default function RegisteredUsers({ users, handleMoreInfo }) {
                   <td>
                     <button
                       className="btn btn--delete"
-                      onClick={() => handleNewPage("profile")}
+                      onClick={() => handleNewPage("form")}
                     >
                       <ion-icon name="close"></ion-icon>
                     </button>

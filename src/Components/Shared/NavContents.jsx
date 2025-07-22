@@ -6,7 +6,9 @@ export default function NavContents({
   handleNewPage,
   handleAdminLogin,
   isMenuOpen,
+  userRole,
 }) {
+  console.log(userRole);
   return (
     <>
       <div className="logo-img-wrapper">
@@ -30,7 +32,12 @@ export default function NavContents({
             );
           })}
           <li>
-            <button className="btn btn--login" onClick={handleAdminLogin}>
+            <button
+              className={`btn btn--login ${
+                userRole === "admin" ? "display--none" : ""
+              }`}
+              onClick={handleAdminLogin}
+            >
               Admin Login
             </button>
           </li>

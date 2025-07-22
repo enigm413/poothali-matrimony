@@ -3,17 +3,23 @@ import ProfileCategory from "./ProfileCategory";
 import ProfileGallery from "./ProfileGallery";
 
 export default function Profile({ userRole, ...profile }) {
-  const { first_img, second_img, third_img, name, birth_chart, ...data } =
-    profile;
+  const {
+    profile_img_01,
+    profile_img_02,
+    profile_img_03,
+    name,
+    birth_chart,
+    ...data
+  } = profile;
   return (
     <section className="section-profile">
       <div className="profile-wrapper wrapper">
         <div className="profile-header">
           <h1 className="profile-name">{name}</h1>
           <ProfileGallery
-            first_img={first_img}
-            second_img={second_img}
-            third_img={third_img}
+            first_img={profile_img_01}
+            second_img={profile_img_02}
+            third_img={profile_img_03}
             name={name}
           />
 

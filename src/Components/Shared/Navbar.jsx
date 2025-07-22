@@ -8,6 +8,7 @@ export default function Navbar({
   handleAdminLogin,
   isMenuOpen,
   setIsMenuOpen,
+  userRole,
 }) {
   return (
     <header className={newPage === "home" ? "navbar--home" : "navbar--page"}>
@@ -15,6 +16,7 @@ export default function Navbar({
         handleNewPage={handleNewPage}
         isMenuOpen={isMenuOpen}
         handleAdminLogin={handleAdminLogin}
+        userRole={userRole}
       />
 
       <button
