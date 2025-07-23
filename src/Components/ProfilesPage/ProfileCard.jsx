@@ -1,5 +1,5 @@
-export default function ProfileCard({ handleMoreInfo, ...profile }) {
-  const { profile_img_01, name, age, religion, location } = profile;
+export default function ProfileCard({ handleMoreInfo, getAge, ...profile }) {
+  const { profile_img_01, name, religion, location, birth_date } = profile;
   return (
     <article className="profile-card">
       <div className="profile-card-img-wrapper">
@@ -15,7 +15,7 @@ export default function ProfileCard({ handleMoreInfo, ...profile }) {
         <p className="profile-card-title">{name}</p>
 
         <ul className="profile-card-content-wrapper">
-          <li>{age} Years</li>
+          <li>{getAge(birth_date)} Years</li>
           <li>{religion}</li>
           <li>{location}</li>
         </ul>

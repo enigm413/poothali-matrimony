@@ -1,28 +1,36 @@
 import { useState } from "react";
+import demoImg from "../../assets/Images/demo.webp";
 
 export default function ProfileGallery({
-  first_img,
-  second_img,
-  third_img,
-  name,
+  profile_img_01,
+  profile_img_02,
+  profile_img_03,
+  mainImg,
+  setMainImg,
 }) {
-  const [mainImg, setMainImg] = useState(first_img);
-
   return (
     <div className="profile-gallery-wrapper">
       <div className="main-img-wrapper">
-        <img src={mainImg} alt="Main Profile Image" className="main-img" />
+        <img
+          src={!mainImg ? demoImg : mainImg}
+          alt="Main Profile Image"
+          className="main-img"
+        />
       </div>
 
       <ul className="profile-gallery">
-        {[first_img, second_img, third_img].map((img, index) => {
+        {[profile_img_01, profile_img_02, profile_img_03].map((img, index) => {
           return (
             <li
               className="profile-img-wrapper"
               key={index}
               onClick={() => setMainImg(img)}
             >
-              <img src={img} alt="test image" className="profile-img" />
+              <img
+                src={!img ? demoImg : img}
+                alt="test image"
+                className="profile-img"
+              />
             </li>
           );
         })}

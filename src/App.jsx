@@ -32,6 +32,8 @@ export default function App() {
   });
   const [userId, setUserId] = useState("");
   const [imageUrls, setImageUrls] = useState({});
+  const [searchedUsers, setSeachedUser] = useState([]);
+  const [mainImg, setMainImg] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,7 +45,6 @@ export default function App() {
       if (error) {
         setIsError(true);
       } else {
-        console.log(data);
         setUsers(data);
       }
     };
@@ -84,12 +85,13 @@ export default function App() {
     const filteredProfiles = users.filter((profile) => {
       const minAge = Number(options.minAge) || 18;
       const maxAge = Number(options.maxAge) || 60;
+      const age = getAge(profile.birth_date);
 
       return (
         (options.gender === "" || options.gender === profile.gender) &&
         (options.religion === "" || options.religion === profile.religion) &&
-        profile.age >= minAge &&
-        profile.age <= maxAge
+        age >= minAge &&
+        age <= maxAge
       );
     });
 
@@ -118,6 +120,13 @@ export default function App() {
     }
   };
 
+  //Function To Get Age
+  const getAge = (date) => {
+    const birthDate = new Date(date);
+    const currentDate = new Date();
+    return currentDate.getFullYear() - birthDate.getFullYear();
+  };
+
   //Function To Handle New Page
   const handleNewPage = (page) => {
     setNewPage(page);
@@ -139,6 +148,7 @@ export default function App() {
       setIsLoginFormOpen(true);
     }
     setUser(userData);
+    setMainImg(userData.profile_img_01);
     sessionStorage.setItem("currentProfile", JSON.stringify(userData));
     window.scrollTo({ top: 0 });
   };
@@ -182,6 +192,17 @@ export default function App() {
     }
   };
 
+  const handleDeleteProfile = async (id, name) => {
+    const response = await supabase
+      .from("RegisteredUsers")
+      .delete()
+      .eq("id", id);
+
+    if (response) {
+      alert(`The Profile Data related to ${name} is deleted`);
+    }
+  };
+
   // Function To Handle Close Login
   const handleCloseLogin = () => {
     setIsLoginFormOpen(false);
@@ -216,28 +237,43 @@ export default function App() {
     const filesForm = event.currentTarget;
     const formdata = new FormData(filesForm);
     const userData = Object.fromEntries(formdata);
-    const userFileNames = Object.keys(userData);
-    const userFiles = Object.values(userData);
+
+    const userFiles = Object.values(userData).filter((file) => {
+      return file.name !== "";
+    });
+
+    const userFileNames = Object.keys(userData).filter((fileName) => {
+      return userData[fileName].name != "";
+    });
+
     handleUploadFiles(userFiles, userFileNames);
   };
 
   // Function To Handle Profile Form
   const handleProfileForm = async (event) => {
     event.preventDefault();
-
     const profileForm = event.currentTarget;
     const formdata = new FormData(profileForm);
     const formDataObj = Object.fromEntries(formdata);
     const userData = { user_id: userId, ...formDataObj, ...imageUrls };
     const { error } = await supabase.from("RegisteredUsers").insert(userData);
     if (error) {
-      console.log(error.message);
+      alert(error.message);
     } else {
       profileForm.reset();
       alert("User Registeration has completed");
       setImageUrls({});
       setUserId("");
     }
+  };
+
+  //Function To Handle Searched Users
+  const handleSeachedUsers = (event) => {
+    const targetId = event.target.value;
+    const targetUsers = users.filter((user) => {
+      return user.user_id === targetId;
+    });
+    setSeachedUser(targetUsers);
   };
 
   return (
@@ -272,19 +308,31 @@ export default function App() {
             handleFilterForm={handleFilterForm}
             filterError={filterError}
             handleCloseFilter={handleCloseFilter}
+            getAge={getAge}
           />
         ))}
 
-      {newPage === "profile" && <ProfilePage {...user} userRole={userRole} />}
+      {newPage === "profile" && (
+        <ProfilePage
+          {...user}
+          userRole={userRole}
+          handleNewPage={handleNewPage}
+          getAge={getAge}
+          mainImg={mainImg}
+          setMainImg={setMainImg}
+        />
+      )}
 
       {newPage === "dashboard" &&
         (isError ? (
           <Error />
         ) : (
           <AdminPage
-            users={users}
+            users={searchedUsers.length ? searchedUsers : users}
             handleMoreInfo={handleMoreInfo}
             handleNewPage={handleNewPage}
+            handleSearchedUsers={handleSeachedUsers}
+            getAge={getAge}
           />
         ))}
 

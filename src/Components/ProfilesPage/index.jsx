@@ -10,6 +10,7 @@ export default function ProfilesPage({
   handleFilterForm,
   handleCloseFilter,
   filterError,
+  getAge,
 }) {
   return (
     <>
@@ -21,6 +22,7 @@ export default function ProfilesPage({
         handleFilterForm={handleFilterForm}
         filterError={filterError}
         handleCloseFilter={handleCloseFilter}
+        getAge={getAge}
       />
     </>
   );

@@ -8,7 +8,6 @@ export default function NavContents({
   isMenuOpen,
   userRole,
 }) {
-  console.log(userRole);
   return (
     <>
       <div className="logo-img-wrapper">

@@ -102,7 +102,7 @@ tbody,
 thead {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 3.2rem;
   padding: 3.2rem 1.6rem;
 }
 
@@ -114,7 +114,7 @@ td {
 
 .row {
   display: grid;
-  grid-template-columns: 1fr 0.5fr repeat(3, 1fr) repeat(2, 0.5fr);
+  grid-template-columns: 1fr 0.5fr 1fr repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   border-radius: 1.2rem;

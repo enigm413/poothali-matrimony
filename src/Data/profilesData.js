@@ -3,13 +3,14 @@ export const fieldTitles = [
     id: "FIELDGROUP01",
     category: "personal",
     fields: [
-      { id: "FIELD01", title: "age" },
-      { id: "FIELD02", title: "date_of_birth" },
-      { id: "FIELD03", title: "religion" },
-      { id: "FIELD04", title: "birth_star" },
-      { id: "FIELD05", title: "height" },
-      { id: "FIELD06", title: "job" },
-      { id: "FIELD07", title: "location" },
+      { id: "FIELD01", title: "user_id" },
+      { id: "FIELD02", title: "age" },
+      { id: "FIELD03", title: "birth_date" },
+      { id: "FIELD04", title: "religion" },
+      { id: "FIELD05", title: "birth_star" },
+      { id: "FIELD06", title: "height" },
+      { id: "FIELD07", title: "job" },
+      { id: "FIELD08", title: "location" },
     ],
   },
 
@@ -28,10 +29,6 @@ export const fieldTitles = [
   {
     id: "FIELDGROUP03",
     category: "contact",
-    fields: [
-      { id: "FIELD14", title: "phone_number" },
-      { id: "FIELD15", title: "email" },
-      { id: "FIELD16", title: "address" },
-    ],
+    fields: [{ id: "FIELD14", title: "phone_number" }],
   },
 ];

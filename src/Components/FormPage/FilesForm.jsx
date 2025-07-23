@@ -27,7 +27,7 @@ export default function FileUploadForm({
 
         <div className="input-wrapper">
           <label htmlFor="birth-chart">Birth Chart</label>
-          <input id="birth-chart" name="birth_chart" type="file" />
+          <input id="birth-chart" name="birth_chart" type="file" required />
         </div>
 
         <button type="submit" className="btn btn--submit">

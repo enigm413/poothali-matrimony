@@ -4,6 +4,9 @@ export default function RegisteredUsers({
   users,
   handleMoreInfo,
   handleNewPage,
+  handleSearchedUsers,
+  handleDeleteUser,
+  getAge,
 }) {
   return (
     <section className="section-registered-users" id="section-registered-us">
@@ -17,9 +20,9 @@ export default function RegisteredUsers({
             type="text"
             placeholder="Enter the User Id"
             className="searchbar"
+            onChange={handleSearchedUsers}
           />
 
-          {/* <button className="btn">Search</button> */}
           <button className="btn" onClick={() => handleNewPage("form")}>
             Add New User
           </button>
@@ -37,10 +40,17 @@ export default function RegisteredUsers({
 
           <tbody>
             {users.map((user) => {
-              const { id, name, age, religion, location } = user;
+              const { id, name, birth_date, religion, location, phone_number } =
+                user;
               return (
                 <tr className="row" key={id}>
-                  {[name, age, religion, location].map((val, index) => {
+                  {[
+                    name,
+                    getAge(birth_date),
+                    religion,
+                    location,
+                    phone_number,
+                  ].map((val, index) => {
                     return <td key={index}>{val}</td>;
                   })}
                   <td>
@@ -52,23 +62,17 @@ export default function RegisteredUsers({
                     </button>
                   </td>
 
-                  <td>
-                    <button
-                      className="btn btn--edit"
-                      onClick={() => handleNewPage("form")}
-                    >
+                  {/* <td>
+                    <button className="btn btn--edit">
                       <ion-icon name="create"></ion-icon>
                     </button>
                   </td>
 
                   <td>
-                    <button
-                      className="btn btn--delete"
-                      onClick={() => handleNewPage("form")}
-                    >
+                    <button className="btn btn--delete">
                       <ion-icon name="close"></ion-icon>
                     </button>
-                  </td>
+                  </td> */}
                 </tr>
               );
             })}

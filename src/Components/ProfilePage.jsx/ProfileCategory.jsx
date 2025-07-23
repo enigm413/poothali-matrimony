@@ -2,8 +2,10 @@ export default function ProfileCategory({
   userRole,
   category,
   fields,
+  getAge,
   ...data
 }) {
+  console.log(data);
   return (
     <article
       className={`profile-category-wrapper  ${
@@ -20,7 +22,13 @@ export default function ProfileCategory({
               <span className="profile-detail-title">
                 {title.replace(/_/g, " ")}
               </span>
-              <span className="profile-detail-text">{data[title]}</span>
+              <span className="profile-detail-text">
+                {title === "age"
+                  ? getAge(data.birth_date)
+                  : title === "height"
+                  ? `${data[title]} cm`
+                  : data[title]}
+              </span>
             </li>
           );
         })}

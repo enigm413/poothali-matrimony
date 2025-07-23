@@ -11,6 +11,7 @@ export default function Profiles({
   isFilterFormOpen,
   setIsFilterFormOpen,
   filterError,
+  getAge,
 }) {
   return (
     <section className="section-profiles">
@@ -41,6 +42,7 @@ export default function Profiles({
             <ProfileCard
               key={user.id}
               handleMoreInfo={handleMoreInfo}
+              getAge={getAge}
               {...user}
             />
           );
