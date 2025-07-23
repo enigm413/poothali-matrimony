@@ -14,7 +14,9 @@ export default function Hero() {
           soul."
         </p>
 
-        <button className="btn btn--hero">Find Your Perfect Match</button>
+        <a href="#section-contact" className="btn btn--hero">
+          Find Your Perfect Match
+        </a>
       </div>
     </section>
   );
