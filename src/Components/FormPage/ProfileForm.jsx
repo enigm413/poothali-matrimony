@@ -29,6 +29,11 @@ export default function ProfileForm({ handleProfileForm }) {
         </div>
 
         <div className="input-wrapper">
+          <label htmlFor="height">Gender :</label>
+          <input id="height" name="gender" type="text" required />
+        </div>
+
+        <div className="input-wrapper">
           <label htmlFor="phone-number">Phone Number :</label>
           <input id="phone-number" name="phone_number" type="text" required />
         </div>

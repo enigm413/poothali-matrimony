@@ -26,7 +26,7 @@ export default function FilterForm({
           <select name="religion" id="religion">
             <option value="">All</option>
             <option value="Hindu (Nair)">Hindu (Nair)</option>
-            <option value="Hindu (Menon)">Hindu (Menon)</option>
+            <option value="Hindu (Menon)">Hindu (SNDP)</option>
             <option value="Christian">Christian</option>
           </select>
         </div>

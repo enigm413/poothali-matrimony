@@ -1,29 +1,17 @@
-# React + Vite
+# 💍 Poothali Matrimony – React + Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A matrimonial web application built with **React** and **Supabase**. It allows users to browse admin-verified profiles, apply filters, and view profile details. Admin login and basic authentication are supported.
 
-Currently, two official plugins are available:
+## 🔧 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-### How It Works
-
-Users must contact the Admin via WhatsApp to create an account.
-The Admin will ask for specific details, including the preferred
-username and password. As soon as the Admin receives the required
-information, an account will be created.
-
-Users receive a WhatsApp notification once the account is set up
-by the Admin. Users can then log in with their username and
-password to access the platform, where they can browse available
-profiles.
-
-If a user finds an interesting profile, user need to like the
-profile and contact the Admin to request the contact details and
-address information of the profile. Upon verification, the Admin
-will provide the necessary details via WhatsApp.
+- Fully functional responsive UI with navigation and footer.
+- Profile browsing with age, religion, and location filters.
+- Admin login system with restricted access to contact info.
+- Login form for user authentication.
+- Error page for handling unexpected routes or failures.
+- Profile detail view behind login (authentication protected)
+- Image gallery per profile with click-to-preview functionality.
+- Admin login system
+- 🔒 Only Admins can view contact information (phone). Regular users cannot see it even after login.
+- 🛠️ Admins can create new profiles through a secure interface.
+- 🔍 Admins can search profiles by User ID for quick access and management.

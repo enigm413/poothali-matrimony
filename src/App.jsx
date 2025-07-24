@@ -56,7 +56,7 @@ export default function App() {
   const handleAdminPage = async (error, email, loginForm) => {
     if (error) {
       setLoginError("⚠️ Sorry, this account does not exist");
-    } else if (email !== "admin123@gmail.com") {
+    } else if (email !== "poothalim@gmail.com") {
       setLoginError("⚠️ Sorry, this account does have admin privilege");
     } else {
       setLoginError("");

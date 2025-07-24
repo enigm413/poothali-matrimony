@@ -5,7 +5,6 @@ export default function ProfileCategory({
   getAge,
   ...data
 }) {
-  console.log(data);
   return (
     <article
       className={`profile-category-wrapper  ${
