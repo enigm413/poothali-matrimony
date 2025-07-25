@@ -82,7 +82,7 @@ export default function App() {
 
   //Function To Handle Filtered Profiles
   const handleProfileFilters = (options) => {
-    const filteredProfiles = users.filter((profile) => {
+    const targetUsers = users.filter((profile) => {
       const minAge = Number(options.minAge) || 18;
       const maxAge = Number(options.maxAge) || 60;
       const age = getAge(profile.birth_date);
@@ -95,7 +95,7 @@ export default function App() {
       );
     });
 
-    setFilteredUsers(filteredProfiles);
+    return targetUsers;
   };
 
   //Function To Handle Upload Files
@@ -182,12 +182,13 @@ export default function App() {
     const filterForm = event.currentTarget;
     const formData = new FormData(filterForm);
     const filterOptions = Object.fromEntries(formData);
-    handleProfileFilters(filterOptions);
-    if (filteredUsers.length === 0) {
+    const filteredProfiles = handleProfileFilters(filterOptions);
+    if (filteredProfiles.length === 0) {
       setFilterError("⚠️ Sorry, No profile within given age range");
     } else {
       filterForm.reset();
       setIsFilterFormOpen(false);
+      setFilteredUsers(filteredProfiles);
       setFilterError("");
     }
   };
