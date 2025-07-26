@@ -193,17 +193,6 @@ export default function App() {
     }
   };
 
-  const handleDeleteProfile = async (id, name) => {
-    const response = await supabase
-      .from("RegisteredUsers")
-      .delete()
-      .eq("id", id);
-
-    if (response) {
-      alert(`The Profile Data related to ${name} is deleted`);
-    }
-  };
-
   // Function To Handle Close Login
   const handleCloseLogin = () => {
     setIsLoginFormOpen(false);
@@ -248,6 +237,7 @@ export default function App() {
     });
 
     handleUploadFiles(userFiles, userFileNames);
+    filesForm.reset();
   };
 
   // Function To Handle Profile Form
