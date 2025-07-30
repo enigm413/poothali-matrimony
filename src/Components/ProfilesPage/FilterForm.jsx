@@ -25,8 +25,8 @@ export default function FilterForm({
           <label htmlFor="religion">Religion (caste)</label>
           <select name="religion" id="religion">
             <option value="">All</option>
-            <option value="Nair">Nair</option>
-            <option value="SNDP">SNDP</option>
+            <option value="Hindu (Nair)">Hindu (Nair)</option>
+            <option value="Hindu (SNDP)">Hindu (SNDP)</option>
             <option value="Christian">Christian</option>
           </select>
         </div>

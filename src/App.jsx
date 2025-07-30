@@ -184,7 +184,7 @@ export default function App() {
     const filterOptions = Object.fromEntries(formData);
     const filteredProfiles = handleProfileFilters(filterOptions);
     if (filteredProfiles.length === 0) {
-      setFilterError("⚠️ Sorry, No profile within given age range");
+      setFilterError("⚠️ Sorry, No profile with given options");
     } else {
       filterForm.reset();
       setIsFilterFormOpen(false);
